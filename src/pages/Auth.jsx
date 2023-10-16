@@ -6,7 +6,8 @@ const Auth = () => {
     <div>
       <Link to="/">صفحه اول</Link>
       <h1>ورود / عضویت</h1>
-      <Button>ورود</Button>
+      <Button variant="fill">ورود</Button>
+      <Button variant="outline">ورود</Button>
     </div>
   );
 };
