@@ -2,13 +2,15 @@ import Button from "../components/UI/Button";
 import AppleBadge from "../assets/icons/apple-app-store-badge 1.svg";
 import GoogleBadge from "../assets/icons/Google_Play_Store_badge_EN 1.svg";
 import CategoryRow from "../components/UI/CategoryRow";
-import CommunityImage from "../assets/icons/Group.svg";
+import CommunityIcon from "../assets/icons/Group.svg";
 import Tags from "../components/UI/Tags";
 import Logo from "../components/UI/Logo";
 import ProfileButton from "../components/UI/ProfileButton";
 import Sorting from "../components/UI/Sorting";
 import Day from "../components/UI/Day";
 import Header from "../components/Header";
+import CommunityImage from '../assets/images/Community.png'
+import Category from "../components/UI/Category";
 function Ui() {
   return (
     <div>
@@ -16,7 +18,7 @@ function Ui() {
       <Button variant="outline">ورود</Button>
       <img src={AppleBadge} />
       <img src={GoogleBadge} />
-      <CategoryRow image={CommunityImage} text="Community" />
+      <CategoryRow image={CommunityIcon} text="Community" />
       <div className="w-[124px] h-9">
         <Tags tagName={"Mountain Bikes"} />
       </div>
@@ -27,6 +29,10 @@ function Ui() {
       <Sorting text="Popular" />
       <Day day="SAT" date="18" />
       <Header />
+
+      <div className="w-64">
+      <Category image={CommunityImage} text="Community"/>
+      </div>
     </div>
   );
 }
