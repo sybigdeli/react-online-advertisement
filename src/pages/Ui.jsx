@@ -1,6 +1,8 @@
 import Button from "../components/UI/Button";
 import AppleBadge from "../assets/icons/apple-app-store-badge 1.svg";
 import GoogleBadge from "../assets/icons/Google_Play_Store_badge_EN 1.svg";
+import Search from "../components/UI/Search";
+
 import CategoryRow from "../components/UI/CategoryRow";
 import CommunityImage from "../assets/icons/Group.svg";
 import Tags from "../components/UI/Tags";
@@ -12,6 +14,7 @@ import Header from "../components/Header";
 function Ui() {
   return (
     <div>
+      <Search varient={"کتاب"}>دوچرخه</Search>
       <Button variant="fill">ورود</Button>
       <Button variant="outline">ورود</Button>
       <img src={AppleBadge} />
