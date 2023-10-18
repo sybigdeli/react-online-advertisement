@@ -12,6 +12,9 @@ const index = () => {
         <li>
           <Link to="/Profile">Profile</Link>
         </li>
+        <li>
+          <Link to="/ui">Ui</Link>
+        </li>
       </ul>
     </div>
   );
