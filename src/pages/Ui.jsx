@@ -11,6 +11,7 @@ import ProfileButton from "../components/UI/ProfileButton";
 import Sorting from "../components/UI/Sorting";
 import Day from "../components/UI/Day";
 import Header from "../components/Header";
+import FilterRow from "../components/UI/FilterRow";
 function Ui() {
   return (
     <div>
@@ -30,6 +31,7 @@ function Ui() {
       <Sorting text="Popular" />
       <Day day="SAT" date="18" />
       <Header />
+      <FilterRow filterName="Miles from home"/>
     </div>
   );
 }
