@@ -1,9 +1,12 @@
 import Button from "../components/UI/Button";
-import AppleBadge from '../assets/icons/apple-app-store-badge 1.svg'
-import GoogleBadge from '../assets/icons/Google_Play_Store_badge_EN 1.svg'
+import AppleBadge from "../assets/icons/apple-app-store-badge 1.svg";
+import GoogleBadge from "../assets/icons/Google_Play_Store_badge_EN 1.svg";
+import Search from "../components/UI/Search";
+
 function Ui() {
   return (
     <div>
+      <Search varient={"کتاب"}>دوچرخه</Search>
       <Button variant="fill">ورود</Button>
       <Button variant="outline">ورود</Button>
       <img src={AppleBadge} />
