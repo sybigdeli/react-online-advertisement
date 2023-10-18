@@ -17,3 +17,7 @@
     font-weight: 500;
     src: url("./assets/Fonts/Estedad-SemiBold.woff2")
 }
+
+body{
+    direction: rtl !important;
+}
