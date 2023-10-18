@@ -12,11 +12,6 @@ const index = () => {
         <li>
           <Link to="/Profile">Profile</Link>
         </li>
-        <li>
-          <div className="w-[124px] h-9">
-            <Tags tagName={"Mountain Bikes"} />
-          </div>
-        </li>
       </ul>
     </div>
   );
