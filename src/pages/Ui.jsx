@@ -5,6 +5,7 @@ import CategoryRow from "../components/UI/CategoryRow";
 import CommunityImage from "../assets/icons/Group.svg";
 import Tags from "../components/UI/Tags";
 import Logo from "../components/UI/Logo";
+import ProfileButton from "../components/UI/ProfileButton";
 function Ui() {
   return (
     <div>
@@ -17,6 +18,9 @@ function Ui() {
         <Tags tagName={"Mountain Bikes"} />
       </div>
       <Logo />
+      <div className="w-36 h-10">
+        <ProfileButton/>
+      </div>
     </div>
   );
 }
