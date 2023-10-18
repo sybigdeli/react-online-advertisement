@@ -2,6 +2,7 @@ import Button from "../components/UI/Button";
 import AppleBadge from "../assets/icons/apple-app-store-badge 1.svg";
 import GoogleBadge from "../assets/icons/Google_Play_Store_badge_EN 1.svg";
 import Tags from "../components/UI/Tags";
+import ProfileButton from "../components/UI/ProfileButton";
 function Ui() {
   return (
     <div>
@@ -11,6 +12,9 @@ function Ui() {
       <img src={GoogleBadge} />
       <div className="w-[124px] h-9">
         <Tags tagName={"Mountain Bikes"} />
+      </div>
+      <div className="w-36 h-10">
+        <ProfileButton/>
       </div>
     </div>
   );
