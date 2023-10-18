@@ -4,6 +4,7 @@ import GoogleBadge from "../assets/icons/Google_Play_Store_badge_EN 1.svg";
 import CategoryRow from "../components/UI/CategoryRow";
 import CommunityImage from "../assets/icons/Group.svg"
 import Tags from "../components/UI/Tags";
+import ProfileButton from "../components/UI/ProfileButton";
 function Ui() {
   return (
     <div>
@@ -14,6 +15,9 @@ function Ui() {
       <CategoryRow image={CommunityImage} text="Community"/>
       <div className="w-[124px] h-9">
         <Tags tagName={"Mountain Bikes"} />
+      </div>
+      <div className="w-36 h-10">
+        <ProfileButton/>
       </div>
     </div>
   );
