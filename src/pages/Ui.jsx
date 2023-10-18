@@ -7,6 +7,7 @@ import Tags from "../components/UI/Tags";
 import Logo from "../components/UI/Logo";
 import ProfileButton from "../components/UI/ProfileButton";
 import Sorting from "../components/UI/Sorting";
+import Day from '../components/UI/Day'
 function Ui() {
   return (
     <div>
@@ -22,7 +23,8 @@ function Ui() {
       <div className="w-36 h-10">
         <ProfileButton />
       </div>
-      <Sorting text="Popular"/>
+      <Sorting text="Popular" />
+      <Day day="SAT" date="18"/>
     </div>
   );
 }
