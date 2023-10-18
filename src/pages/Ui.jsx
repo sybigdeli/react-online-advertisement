@@ -6,6 +6,7 @@ import CommunityImage from "../assets/icons/Group.svg";
 import Tags from "../components/UI/Tags";
 import Logo from "../components/UI/Logo";
 import ProfileButton from "../components/UI/ProfileButton";
+import Sorting from "../components/UI/Sorting";
 function Ui() {
   return (
     <div>
@@ -19,8 +20,9 @@ function Ui() {
       </div>
       <Logo />
       <div className="w-36 h-10">
-        <ProfileButton/>
+        <ProfileButton />
       </div>
+      <Sorting text="Popular"/>
     </div>
   );
 }
