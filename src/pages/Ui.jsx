@@ -18,7 +18,6 @@ import Sorting from "../components/UI/Sorting";
 import Day from "../components/UI/Day";
 import Header from "../components/Header";
 import FilterRow from "../components/UI/FilterRow";
-import CommunityImage from '../assets/images/Community.png'
 import Category from "../components/UI/Category";
 import ForumLine from "../components/UI/ForumLine";
 function Ui() {
