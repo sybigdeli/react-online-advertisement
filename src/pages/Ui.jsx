@@ -2,9 +2,15 @@ import Button from "../components/UI/Button";
 import AppleBadge from "../assets/icons/apple-app-store-badge 1.svg";
 import GoogleBadge from "../assets/icons/Google_Play_Store_badge_EN 1.svg";
 import Search from "../components/UI/Search";
+import CommunityImage from "../assets/images/Community.png";
+import CommunityIcon from "../assets/icons/Group.svg";
+import ImageUser1 from "../assets/images/user1.svg";
+import ImageUser2 from "../assets/images/user2.svg";
+import ImageUser3 from "../assets/images/user3.svg";
+import ImageUser4 from "../assets/images/user4.svg";
+import ImageUser5 from "../assets/images/user5.svg";
 
 import CategoryRow from "../components/UI/CategoryRow";
-import CommunityIcon from "../assets/icons/Group.svg";
 import Tags from "../components/UI/Tags";
 import Logo from "../components/UI/Logo";
 import ProfileButton from "../components/UI/ProfileButton";
@@ -14,6 +20,7 @@ import Header from "../components/Header";
 import FilterRow from "../components/UI/FilterRow";
 import CommunityImage from '../assets/images/Community.png'
 import Category from "../components/UI/Category";
+import ForumLine from "../components/UI/ForumLine";
 function Ui() {
   return (
     <div>
@@ -36,8 +43,15 @@ function Ui() {
       <FilterRow filterName="Miles from home"/>
 
       <div className="w-64">
-      <Category image={CommunityImage} text="Community"/>
+        <Category image={CommunityImage} text="Community" />
       </div>
+      <ForumLine
+        imageUser1={ImageUser1}
+        imageUser2={ImageUser2}
+        imageUser3={ImageUser3}
+        imageUser4={ImageUser4}
+        imageUser5={ImageUser5}
+      />
     </div>
   );
 }
