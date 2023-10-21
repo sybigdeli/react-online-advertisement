@@ -7,6 +7,9 @@ export default {
       serif: ["Estedad"],
     },
     extend: {
+      backgroundImage: {
+        "header-image": "url('./src/assets/images/Landing.png')",
+      },
       colors: {
         primary: {
           200: "#B160FB",
