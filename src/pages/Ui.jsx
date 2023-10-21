@@ -17,6 +17,7 @@ import ProfileButton from "../components/UI/ProfileButton";
 import Sorting from "../components/UI/Sorting";
 import Day from "../components/UI/Day";
 import Header from "../components/Header";
+import Product from "../components/Product/index";
 import FilterRow from "../components/UI/FilterRow";
 import Category from "../components/UI/Category";
 import ForumLine from "../components/UI/ForumLine";
@@ -39,7 +40,10 @@ function Ui() {
       <Sorting text="Popular" />
       <Day day="SAT" date="18" />
       <Header />
-      <FilterRow filterName="Miles from home"/>
+      <div>
+        <Product>250$</Product>
+      </div>
+      <FilterRow filterName="Miles from home" />
 
       <div className="w-64">
         <Category image={CommunityImage} text="Community" />
