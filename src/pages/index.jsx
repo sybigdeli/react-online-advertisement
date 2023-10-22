@@ -18,6 +18,7 @@ import Category from "../components/UI/Category";
 import ForumLine from "../components/UI/ForumLine";
 import Day from "../components/UI/Day";
 import EventRow from "../components/UI/EventRow";
+import Footer from "../components/Footer";
 const HomePage = () => {
   return (
     <div>
@@ -160,7 +161,9 @@ const HomePage = () => {
             </p>
           </div>
         </div>
+
       </section>
+      <Footer/>
     </div>
   );
 };
