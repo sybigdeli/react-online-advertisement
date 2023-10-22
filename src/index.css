@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 @font-face {
+  font-family: "estedadLighter";
+  font-weight: lighter;
+  src: url("./assets/Fonts/Estedad-ExtraLight.woff2");
+}
+
+@font-face {
   font-family: "Estedad";
   font-weight: thin;
   src: url("./assets/Fonts/Estedad-Thin.woff2");
