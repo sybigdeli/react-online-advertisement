@@ -1,7 +1,7 @@
 import React from "react";
 import appStoreLogo from "../assets/icons/apple-app-store-badge 1.svg";
 import googlePlayLogo from "../assets/icons/Google_Play_Store_badge_EN 1.svg";
-
+import { stringify } from "postcss";
 
 const Footer = () => {
   const footerLogos = [appStoreLogo, googlePlayLogo];
@@ -34,12 +34,12 @@ const Footer = () => {
   ];
 
   return (
-    <footer dir="ltr" className="px-[70px] gap-3 bg-primary-400 border border-primary-600 pt-[20px]">
+    <footer className="px-[70px] gap-3 ">
       <div className="flex justify-between">
         <div className="">
-          <h3 className="text-[11px] text-textColor-600">{footerData[0].title}</h3>
+          <h3>{footerData[0].title}</h3>
           <br />
-          <ul className="grid grid-cols-2 grid-rows-3 gap-4 gap-x-10 text-[13px] text-textColor-200">
+          <ul className="grid grid-cols-2 grid-rows-3 gap-4 gap-x-10">
             {footerData[0].rows.map((row) => (
               <li className="">
                 <a href="">{row}</a>
@@ -47,8 +47,8 @@ const Footer = () => {
             ))}
           </ul>
         </div>
-        <div className="mx-4 text-[13px] text-textColor-200">
-          <h3 className="text-[11px] text-textColor-600">{footerData[1].title}</h3>
+        <div className="mx-4">
+          <h3>{footerData[1].title}</h3>
           <br />
           <ul className="grid grid-cols-3 grid-rows-3 gap-4">
             {footerData[1].rows.map((row) => (
@@ -65,8 +65,8 @@ const Footer = () => {
         </div>
       </div>
       <div className="">
-        <div className="h-[1px] w-full bg-primary-600 mt-[31px]"></div>
-        <div className=" flex font-estedadLighter  justify-center my-5">
+        <hr />
+        <div className=" flex  justify-center my-5 font-thin">
           2021 Craigstlist
         </div>
       </div>
