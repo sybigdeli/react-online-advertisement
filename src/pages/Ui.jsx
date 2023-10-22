@@ -20,8 +20,12 @@ import Header from "../components/Header";
 import Product from "../components/Product/index";
 import FilterRow from "../components/UI/FilterRow";
 import Category from "../components/UI/Category";
+<<<<<<< Updated upstream
 import ForumLine from "../components/UI/ForumLine";
 import Footer from "../components/Footer";
+=======
+import Footer from "@/components/footer";
+>>>>>>> Stashed changes
 function Ui() {
   return (
     <div>
@@ -47,6 +51,7 @@ function Ui() {
       <FilterRow filterName="Miles from home" />
 
       <div className="w-64">
+<<<<<<< Updated upstream
         <Category image={CommunityImage} text="Community" />
       </div>
       <ForumLine
@@ -57,6 +62,15 @@ function Ui() {
         imageUser5={ImageUser5}
       />
       <Footer/>
+=======
+      <Category image={CommunityImage} text="Community"/>
+      </div >
+      <div className="w-full h-[191px] mx-0 px-0">
+      <Footer className="h-[191px]"/>
+
+      </div>
+
+>>>>>>> Stashed changes
     </div>
   );
 }
