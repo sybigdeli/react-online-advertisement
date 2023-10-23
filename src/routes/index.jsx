@@ -4,6 +4,7 @@ import ProfilePage from "../pages/Profile";
 import AuthPage from "../pages/Auth";
 import Ui from "../pages/Ui";
 import Search from "../pages/Search";
+import Details from "@/pages/Details";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,5 +26,9 @@ const router = createBrowserRouter([
     path: "/Search",
     element: <Search />,
   },
+  {
+    path:"/Details",
+    element:<Details/>
+  }
 ]);
 export default router;
