@@ -9,11 +9,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import "./Product.css";
-const Product = ({ children }) => {
+const ProductBox = ({ children }) => {
   const ProductValue = [img1, img2, img3];
   return (
     <div
-      className="product-box w-[268px] rounded-[19px] overflow-hidden m-3 shadow-lg
+      className="product-box rounded-[19px] overflow-hidden m-3 shadow-lg
     "
     >
       <Swiper
@@ -56,4 +56,4 @@ const Product = ({ children }) => {
   );
 };
 
-export default Product;
+export default ProductBox;
