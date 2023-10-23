@@ -22,6 +22,10 @@ import FilterRow from "../components/UI/FilterRow";
 import Category from "../components/UI/Category";
 import ForumLine from "../components/UI/ForumLine";
 import Footer from "../components/Footer";
+import { Pagination } from "swiper/modules";
+
+
+
 function Ui() {
   return (
     <div>
@@ -56,10 +60,11 @@ function Ui() {
         imageUser4={ImageUser4}
         imageUser5={ImageUser5}
       />
-      <Category image={CommunityImage} text="Community"/>
-      <Footer/>
-      
+      <Category image={CommunityImage} text="Community" />
+    <Pagination />
+    
 
+      <Footer />
     </div>
   );
 }
