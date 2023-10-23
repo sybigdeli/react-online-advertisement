@@ -22,8 +22,13 @@ import FilterRow from "../components/UI/FilterRow";
 import Category from "../components/UI/Category";
 import ForumLine from "../components/UI/ForumLine";
 import Footer from "../components/Footer";
+import Pagination from "@/components/UI/Pagination";
 import HeaderSearch from "@/components/HeaderSearch";
 function Ui() {
+  const handlePageChange = (page) => {
+    console.log("Page changed:", page);
+  };
+  const totalPages = 10;
   return (
     <div>
       <Search varient={"کتاب"}>دوچرخه</Search>
@@ -57,6 +62,11 @@ function Ui() {
         imageUser4={ImageUser4}
         imageUser5={ImageUser5}
       />
+
+      <Pagination totalPages={totalPages} onPageChange={handlePageChange} />
+      
+      
+      
       <HeaderSearch />
       <Footer/>
     </div>
