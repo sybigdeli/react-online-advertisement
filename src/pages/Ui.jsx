@@ -22,11 +22,13 @@ import FilterRow from "../components/UI/FilterRow";
 import Category from "../components/UI/Category";
 import ForumLine from "../components/UI/ForumLine";
 import Footer from "../components/Footer";
-import { Pagination } from "swiper/modules";
-
-
+import Pagination from "@/components/UI/Pagination";
 
 function Ui() {
+  const handlePageChange = (page) => {
+    console.log("Page changed:", page);
+  };
+  const totalPages = 10;
   return (
     <div>
       <Search varient={"کتاب"}>دوچرخه</Search>
@@ -61,10 +63,11 @@ function Ui() {
         imageUser5={ImageUser5}
       />
       <Category image={CommunityImage} text="Community" />
-    <Pagination />
-    
 
+      <Pagination totalPages={totalPages} onPageChange={handlePageChange} />
+      
       <Footer />
+      
     </div>
   );
 }
