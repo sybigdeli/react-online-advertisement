@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import HeaderSearch from "@/components/HeaderSearch";
 import ProductBox from "@/components/Product/ProductBox";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
@@ -7,7 +7,7 @@ const Search = () => {
   return (
     <div>
       <div>
-        <Header></Header>
+        <HeaderSearch></HeaderSearch>
       </div>
       <div className="grid grid-cols-5 gap-8">
         <div className="search-content-right col-span-1 border-l-[1px] flex justify-center">
