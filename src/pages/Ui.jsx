@@ -17,13 +17,13 @@ import ProfileButton from "../components/UI/ProfileButton";
 import Sorting from "../components/UI/Sorting";
 import Day from "../components/UI/Day";
 import Header from "../components/Header";
-import Product from "../components/Product/index";
+import Product from "../components/Product/ProductBox";
 import FilterRow from "../components/UI/FilterRow";
 import Category from "../components/UI/Category";
 import ForumLine from "../components/UI/ForumLine";
 import Footer from "../components/Footer";
 import Pagination from "@/components/UI/Pagination";
-
+import HeaderSearch from "@/components/HeaderSearch";
 function Ui() {
   const handlePageChange = (page) => {
     console.log("Page changed:", page);
@@ -62,12 +62,13 @@ function Ui() {
         imageUser4={ImageUser4}
         imageUser5={ImageUser5}
       />
-      <Category image={CommunityImage} text="Community" />
 
       <Pagination totalPages={totalPages} onPageChange={handlePageChange} />
       
-      <Footer />
       
+      
+      <HeaderSearch />
+      <Footer/>
     </div>
   );
 }

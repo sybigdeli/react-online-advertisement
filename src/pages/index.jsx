@@ -10,7 +10,8 @@ import ImageUser4 from "../assets/images/user4.svg";
 import ImageUser5 from "../assets/images/user5.svg";
 import RightIcon from "../assets/icons/right.svg";
 import LeftIcon from "../assets/icons/left.svg";
-import ArowRight from '../assets/icons/arrow right.svg'
+import ArowRight from "../assets/icons/arrow right.svg";
+import MapPin from "../assets/icons/map-pin.svg";
 
 import Header from "../components/Header";
 import Search from "../components/UI/Search";
@@ -26,7 +27,7 @@ const HomePage = () => {
         <Header />
       </header>
 
-      <section className="w-full px-[360px] py-[95px] flex flex-col justify-center items-center gap-[20px] bg-black bg-opacity-60 bg-header-image bg-cover bg-no-repeat">
+      <section className="w-full px-[550px] py-[95px] flex flex-col justify-center items-center gap-[20px] bg-black bg-opacity-60 bg-header-image bg-cover bg-no-repeat">
         <div className="w-fit text-left">
           <span className="text-white text-[46px] font-normal tracking-wide">
             The World's Largest
@@ -39,8 +40,16 @@ const HomePage = () => {
             Website
           </span>
         </div>
-        <div className="w-fit flex justify-center items-center">
-          <Search />
+        <div className="w-full flex justify-center items-center">
+          <Search>
+            <div className="flex flex-row items-center justify-center gap-1">
+              <p>Austin, TX USA</p>
+              <img
+                src={MapPin}
+                className="opacity-50 flex-col justify-start items-start"
+              />
+            </div>
+          </Search>
         </div>
       </section>
 
@@ -70,11 +79,15 @@ const HomePage = () => {
 
       <section className="flex flex-row  gap-[29px] py-12 px-[80px]">
         <div className="w-4/12 flex flex-col gap-8">
-          <p className="text-center text-neutral-600 text-2xl leading-tight tracking-tight">Calender</p>
+          <p className="text-center text-neutral-600 text-2xl leading-tight tracking-tight">
+            Calender
+          </p>
 
           <div className="flex-grow  bg-white rounded-[20px] shadow border border-gray-200 p-[33px] flex flex-col justify-center items-center gap-4">
             <div className="w-full flex justify-between items-center">
-              <p className="text-center text-neutral-600 text-lg tracking-tight">October 2021</p>
+              <p className="text-center text-neutral-600 text-lg tracking-tight">
+                October 2021
+              </p>
               <div className="flex justify-center items-center gap-4">
                 <img src={RightIcon} />
                 <img src={LeftIcon} />
@@ -157,13 +170,12 @@ const HomePage = () => {
             />
             <p className="flex justify-center items-center gap-[5px] text-neutral-400 text-sm font-normal self-start">
               <img src={ArowRight} />
-              View All Disscussions Categories 
+              View All Disscussions Categories
             </p>
           </div>
         </div>
-
       </section>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
