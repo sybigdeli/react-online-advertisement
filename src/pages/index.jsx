@@ -184,13 +184,13 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="grid grid-cols-1 xl:grid-cols-6 gap-y-10 py-5 px-5 md:px-20 mx-auto my-0">
-        <div className="w-full grid col-span-2 gap-10 my-0 mx-auto">
+      <section className="grid grid-cols-1 xl:flex gap-y-10 xl:gap-10 justify-center items-center py-5 px-5 md:px-20 mx-auto my-0">
+        <div className="grid col-span-1 xl:flex xl:flex-grow xl:flex-col gap-10 my-0 mx-auto">
           <p className="text-center text-neutral-600 font-bold text-2xl leading-tight tracking-tight">
             تقویم
           </p>
 
-          <div className=" bg-white rounded-2xl shadow border border-gray-200 p-5 grid justify-center items-center gap-4">
+          <div className="w-full flex flex-grow flex-col p-5 bg-white rounded-2xl shadow border border-gray-200 justify-center items-center gap-4">
             <div className="w-full flex justify-between items-center">
               <p className="text-center text-neutral-600 text-lg tracking-tight">
                 اکتبر 2021
@@ -220,11 +220,11 @@ const HomePage = () => {
           </div>
         </div>
 
-        <div className="grid col-span-1 xl:col-span-4 gap-10 my-0 mx-auto">
+        <div className="grid col-span-1 xl:flex xl:flex-grow xl:flex-col gap-10 my-0 mx-auto">
           <p className="text-center text-neutral-600 font-bold text-2xl leading-tight tracking-tight">
             تالارهای بحث و گفتگو
           </p>
-          <div className="flex-grow w-full p-5 bg-white rounded-[20px] shadow border border-gray-200 flex flex-col justify-center items-center gap-4">
+          <div className="w-full flex flex-grow flex-col p-5 bg-white rounded-2xl shadow border border-gray-200 justify-center items-center gap-4">
             {forumContent.map((forumContents) => (
               <ForumLine
                 title={forumContents.title}
