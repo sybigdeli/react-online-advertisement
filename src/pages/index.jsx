@@ -88,7 +88,8 @@ const calenderDates = [
 ];
 const eventsText = [
   {
-    eventText: "امروز با دریافت دوره های تکنسین کامپیوتر، پیشگام فناوری اطلاعات باشید.",
+    eventText:
+      "امروز با دریافت دوره های تکنسین کامپیوتر، پیشگام فناوری اطلاعات باشید.",
   },
   {
     eventText: "روز خوبی داشته باشید !",
@@ -151,47 +152,45 @@ const forumContent = [
 const HomePage = () => {
   return (
     <div>
-      <header>
+      {/* <header>
         <Header />
-      </header>
+      </header> */}
 
-      <section className="w-full px-[550px] py-[95px] flex flex-col justify-center items-center gap-[20px] bg-black bg-opacity-60 bg-header-image bg-cover bg-no-repeat">
-        <div className="grid grid-cols-2 text-right">
-          <h4 className="text-white text-[46px] font-normal tracking-wide">
+      <section className="w-full px-5 md:px-10 py-20 grid grid-rows-2 gap-y-10 bg-black bg-opacity-60 bg-header-image bg-cover bg-no-repeat">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 text-center  md:text-right mx-auto my-0">
+          <h4 className="text-white text-3xl sm:text-5xl font-normal">
             بزرگترین وب سایت
           </h4>
-          <h4 className="text-purple-400 text-[46px] font-bold tracking-wide">
+          <h4 className="text-purple-400 text-3xl sm:text-5xl font-bold">
             آگهی های تبلیغاتی
           </h4>
         </div>
-        <div className="w-full flex justify-center items-center">
+        <div className="max-w-sm grid mx-auto my-0">
           <Search>
             <City city="Austin" country="TX USA" />
           </Search>
         </div>
       </section>
 
-      <section className="w-full flex flex-col justify-center items-center gap-[30px] py-12 px-[80px]">
-        <p className="text-center text-neutral-600 font-bold text-2xl tracking-tight">
+      <section className="w-full flex flex-col justify-center items-center gap-6 py-8 md:py-12 px-10 md:px-20">
+        <p className="text-center text-neutral-600 font-bold text-2xl">
           برخی از دسته بندی ها
         </p>
 
-        <div className="w-full flex justify-center items-center gap-[30px]">
+        <div className="w-full grid gird-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {categoriesItems.map((categories, index) => (
-            <div className="w-96">
-              <Category image={categories.image} text={categories.text} />
-            </div>
+            <Category image={categories.image} text={categories.text} />
           ))}
         </div>
       </section>
 
-      <section className="flex flex-row gap-[29px] py-12 px-[80px]">
-        <div className="w-4/12 flex flex-col gap-8">
+      <section className="grid grid-cols-1 xl:grid-cols-6 gap-y-10 py-5 px-5 md:px-20 mx-auto my-0">
+        <div className="w-full grid col-span-2 gap-10 my-0 mx-auto">
           <p className="text-center text-neutral-600 font-bold text-2xl leading-tight tracking-tight">
             تقویم
           </p>
 
-          <div className="flex-grow  bg-white rounded-[20px] shadow border border-gray-200 p-[33px] flex flex-col justify-center items-center gap-4">
+          <div className=" bg-white rounded-2xl shadow border border-gray-200 p-5 grid justify-center items-center gap-4">
             <div className="w-full flex justify-between items-center">
               <p className="text-center text-neutral-600 text-lg tracking-tight">
                 اکتبر 2021
@@ -202,7 +201,7 @@ const HomePage = () => {
               </div>
             </div>
 
-            <div className="w-full flex flex-row justify-center items-center gap-[8px]">
+            <div className="w-full grid grid-cols-5 grid-rows-2 justify-center items-center gap-3">
               {calenderDates.map((calender) => (
                 <Day day={calender.day} date={calender.date} />
               ))}
@@ -221,7 +220,7 @@ const HomePage = () => {
           </div>
         </div>
 
-        <div className="w-8/12 flex flex-col gap-8">
+        <div className="grid col-span-1 xl:col-span-4 gap-10 my-0 mx-auto">
           <p className="text-center text-neutral-600 font-bold text-2xl leading-tight tracking-tight">
             تالارهای بحث و گفتگو
           </p>

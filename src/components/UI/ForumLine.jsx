@@ -1,15 +1,15 @@
 function ForumLine({title,imageUser1,imageUser2,imageUser3,imageUser4,imageUser5}) {
   return (
-    <div className="w-full flex justify-between items-center gap-[10px] p-[10px] rounded-[20px] bg-white shadow py-[5px]">
-      <div className="flex flex-row justify-center items-center gap-[10px]">
-        <div className="w-12">
+    <div className="w-full grid grid-cols-1 md:grid-cols-4 gap-4 p-2 rounded-2xl bg-white shadow py-1">
+      <div className="grid grid-cols-1 md:grid-cols-4 col-span-1 md:col-span-3 gap-2">
+        <div className="w-12 grid mx-auto my-0">
           <img className="w-full h-full rounded-full" src={imageUser1} />
         </div>
-        <div className="flex flex-col gap-[2px]">
-          <p className="text-neutral-600 text-sm">
+        <div className="grid col-span-1 md:col-span-3 gap-2 mx-auto my-0">
+          <p className="text-neutral-600 text-sm text-center md:text-right">
             {title}
           </p>
-          <div className="flex gap-[12px]">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mx-auto my-0">
             <span className="text-neutral-600 text-xs">Relocation</span>
             <span className="text-purple-500 text-xs">@randmlee</span>
             <span className="text-zinc-400 text-xs">39 minutes ago</span>
@@ -18,7 +18,7 @@ function ForumLine({title,imageUser1,imageUser2,imageUser3,imageUser4,imageUser5
         </div>
       </div>
 
-      <div className="flex flex-row justify-center items-center">
+      <div className="grid grid-cols-4 mx-auto my-0">
         <div className="w-8">
           <img
             className="w-8 h-8 rounded-full border-2 border-white"

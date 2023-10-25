@@ -9,7 +9,7 @@ function Category({ image, text }) {
         src={image}
       />
       <div className="w-full left-0 bottom-0 top-1/2 absolute bg-gradient-to-t from-black to-transparent" />
-      <div className="absolute bottom-0 px-6 pb-4 text-right text-white text-2xl font-normal leading-tight tracking-wide">
+      <div className="absolute bottom-0 px-6 pb-4 text-white text-xl text-center md:text-right md:text-2xl font-normal">
         {text}
       </div>
     </div>
