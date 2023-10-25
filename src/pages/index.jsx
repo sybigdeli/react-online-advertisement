@@ -20,6 +20,134 @@ import ForumLine from "../components/UI/ForumLine";
 import Day from "../components/UI/Day";
 import EventRow from "../components/UI/EventRow";
 import Footer from "../components/Footer";
+import City from "@/components/UI/City";
+
+const categoriesItems = [
+  {
+    text: "انجمن",
+    image: CommunityImage,
+  },
+  {
+    text: "برای فروش",
+    image: ForSale,
+  },
+  {
+    text: "مسکن",
+    image: Housing,
+  },
+  {
+    text: "شغل ها",
+    image: Jobs,
+  },
+  {
+    text: "خدمات",
+    image: Services,
+  },
+];
+const calenderDates = [
+  {
+    day: "SAT",
+    date: "2",
+  },
+  {
+    day: "SUN",
+    date: "3",
+  },
+  {
+    day: "MON",
+    date: "4",
+  },
+  {
+    day: "TUE",
+    date: "5",
+  },
+  {
+    day: "WED",
+    date: "6",
+  },
+  {
+    day: "THU",
+    date: "7",
+  },
+  {
+    day: "FRI",
+    date: "8",
+  },
+  {
+    day: "SAT",
+    date: "9",
+  },
+  {
+    day: "SUN",
+    date: "10",
+  },
+  {
+    day: "MON",
+    date: "11",
+  },
+];
+const eventsText = [
+  {
+    eventText: "امروز با دریافت دوره های تکنسین کامپیوتر، پیشگام فناوری اطلاعات باشید.",
+  },
+  {
+    eventText: "روز خوبی داشته باشید !",
+  },
+  {
+    eventText: "تخفیف های اخر هفته در آگهی های فروش",
+  },
+  {
+    eventText: "کاهش قیمت مسکن واگعی نیست !",
+  },
+  {
+    eventText: "مادرش زنده است ! مادرش زنده است ! ",
+  },
+  {
+    eventText: "خورشید پوشتش بی ماست",
+  },
+];
+const forumContent = [
+  {
+    title: "هر کس هست سلام.",
+    imageUser1: ImageUser1,
+    imageUser2: ImageUser2,
+    imageUser3: ImageUser3,
+    imageUser4: ImageUser4,
+    imageUser5: ImageUser5,
+  },
+  {
+    title: "هندوانه ای که خریدم داخلش موز بود.",
+    imageUser1: ImageUser1,
+    imageUser2: ImageUser2,
+    imageUser3: ImageUser3,
+    imageUser4: ImageUser4,
+    imageUser5: ImageUser5,
+  },
+  {
+    title: "پول زور وَ ده",
+    imageUser1: ImageUser1,
+    imageUser2: ImageUser2,
+    imageUser3: ImageUser3,
+    imageUser4: ImageUser4,
+    imageUser5: ImageUser5,
+  },
+  {
+    title: "ها این که وَگویی یعنی چه",
+    imageUser1: ImageUser1,
+    imageUser2: ImageUser2,
+    imageUser3: ImageUser3,
+    imageUser4: ImageUser4,
+    imageUser5: ImageUser5,
+  },
+  {
+    title: "یکی برسه به دادم",
+    imageUser1: ImageUser1,
+    imageUser2: ImageUser2,
+    imageUser3: ImageUser3,
+    imageUser4: ImageUser4,
+    imageUser5: ImageUser5,
+  },
+];
 const HomePage = () => {
   return (
     <div>
@@ -28,65 +156,45 @@ const HomePage = () => {
       </header>
 
       <section className="w-full px-[550px] py-[95px] flex flex-col justify-center items-center gap-[20px] bg-black bg-opacity-60 bg-header-image bg-cover bg-no-repeat">
-        <div className="w-fit text-left">
-          <span className="text-white text-[46px] font-normal tracking-wide">
-            The World's Largest
-            <br />
-          </span>
-          <span className="text-purple-400 text-[46px] font-bold tracking-wide">
-            Classifieds Advertisement
-          </span>
-          <span className="text-white text-[46px] font-normal tracking-wide">
-            Website
-          </span>
+        <div className="grid grid-cols-2 text-right">
+          <h4 className="text-white text-[46px] font-normal tracking-wide">
+            بزرگترین وب سایت
+          </h4>
+          <h4 className="text-purple-400 text-[46px] font-bold tracking-wide">
+            آگهی های تبلیغاتی
+          </h4>
         </div>
         <div className="w-full flex justify-center items-center">
           <Search>
-            <div className="flex flex-row items-center justify-center gap-1">
-              <p>Austin, TX USA</p>
-              <img
-                src={MapPin}
-                className="opacity-50 flex-col justify-start items-start"
-              />
-            </div>
+            <City city="Austin" country="TX USA" />
           </Search>
         </div>
       </section>
 
-      <section className="w-full flex flex-col justify-center items-center gap-[20px] py-12 px-[80px]">
-        <p className="text-center text-neutral-600 text-2xl tracking-tight">
-          Some Categories
+      <section className="w-full flex flex-col justify-center items-center gap-[30px] py-12 px-[80px]">
+        <p className="text-center text-neutral-600 font-bold text-2xl tracking-tight">
+          برخی از دسته بندی ها
         </p>
 
         <div className="w-full flex justify-center items-center gap-[30px]">
-          <div className="w-96">
-            <Category image={CommunityImage} text="Community" />
-          </div>
-          <div className="w-96">
-            <Category image={ForSale} text="For Sale" />
-          </div>
-          <div className="w-96">
-            <Category image={Housing} text="Housing" />
-          </div>
-          <div className="w-96">
-            <Category image={Jobs} text="Jobs" />
-          </div>
-          <div className="w-96">
-            <Category image={Services} text="Services" />
-          </div>
+          {categoriesItems.map((categories, index) => (
+            <div className="w-96">
+              <Category image={categories.image} text={categories.text} />
+            </div>
+          ))}
         </div>
       </section>
 
-      <section className="flex flex-row  gap-[29px] py-12 px-[80px]">
+      <section className="flex flex-row gap-[29px] py-12 px-[80px]">
         <div className="w-4/12 flex flex-col gap-8">
-          <p className="text-center text-neutral-600 text-2xl leading-tight tracking-tight">
-            Calender
+          <p className="text-center text-neutral-600 font-bold text-2xl leading-tight tracking-tight">
+            تقویم
           </p>
 
           <div className="flex-grow  bg-white rounded-[20px] shadow border border-gray-200 p-[33px] flex flex-col justify-center items-center gap-4">
             <div className="w-full flex justify-between items-center">
               <p className="text-center text-neutral-600 text-lg tracking-tight">
-                October 2021
+                اکتبر 2021
               </p>
               <div className="flex justify-center items-center gap-4">
                 <img src={RightIcon} />
@@ -95,82 +203,42 @@ const HomePage = () => {
             </div>
 
             <div className="w-full flex flex-row justify-center items-center gap-[8px]">
-              <Day day="SAT" date="2" />
-              <Day day="SUN" date="3" />
-              <Day day="MON" date="4" />
-              <Day day="TUE" date="5" />
-              <Day day="WED" date="6" />
-              <Day day="THU" date="7" />
-              <Day day="FRI" date="8" />
-              <Day day="SAT" date="9" />
-              <Day day="SUN" date="10" />
-              <Day day="MON" date="11" />
+              {calenderDates.map((calender) => (
+                <Day day={calender.day} date={calender.date} />
+              ))}
             </div>
 
             <div className="w-full flex flex-col justify-center items-center gap-[10px]">
-              <EventRow EventText="Be an IT pioneer today by getting Computer Technician Courses." />
-              <EventRow EventText="Be an IT pioneer today by getting Computer Technician Courses." />
-              <EventRow EventText="Be an IT pioneer today by getting Computer Technician Courses." />
-              <EventRow EventText="Be an IT pioneer today by getting Computer Technician Courses." />
-              <EventRow EventText="Be an IT pioneer today by getting Computer Technician Courses." />
-              <EventRow EventText="Be an IT pioneer today by getting Computer Technician Courses." />
+              {eventsText.map((events) => (
+                <EventRow EventText={events.eventText} />
+              ))}
             </div>
 
             <p className="flex justify-center items-center gap-[5px] text-neutral-400 text-sm font-normal self-start">
               <img src={ArowRight} />
-              See All
+              مشاهده همه
             </p>
           </div>
         </div>
 
         <div className="w-8/12 flex flex-col gap-8">
-          <p className="text-center text-neutral-600 text-2xl leading-tight tracking-tight">
-            Discussion Forums
+          <p className="text-center text-neutral-600 font-bold text-2xl leading-tight tracking-tight">
+            تالارهای بحث و گفتگو
           </p>
           <div className="flex-grow w-full p-5 bg-white rounded-[20px] shadow border border-gray-200 flex flex-col justify-center items-center gap-4">
-            <ForumLine
-              imageUser1={ImageUser1}
-              imageUser2={ImageUser2}
-              imageUser3={ImageUser3}
-              imageUser4={ImageUser4}
-              imageUser5={ImageUser5}
-              title="Lorem, ipsum dolor sit amet consectetur adipisicing elit"
-            />
-            <ForumLine
-              imageUser1={ImageUser2}
-              imageUser2={ImageUser1}
-              imageUser3={ImageUser3}
-              imageUser4={ImageUser4}
-              imageUser5={ImageUser5}
-              title="Lorem, ipsum dolor sit amet consectetur adipisicing elit"
-            />
-            <ForumLine
-              imageUser1={ImageUser3}
-              imageUser2={ImageUser2}
-              imageUser3={ImageUser1}
-              imageUser4={ImageUser4}
-              imageUser5={ImageUser5}
-              title="Lorem, ipsum dolor sit amet consectetur adipisicing elit"
-            />
-            <ForumLine
-              imageUser1={ImageUser4}
-              imageUser2={ImageUser2}
-              imageUser3={ImageUser3}
-              imageUser4={ImageUser1}
-              imageUser5={ImageUser5}
-              title="Lorem, ipsum dolor sit amet consectetur adipisicing elit"
-            />
-            <ForumLine
-              imageUser1={ImageUser5}
-              imageUser2={ImageUser2}
-              imageUser3={ImageUser3}
-              imageUser4={ImageUser4}
-              imageUser5={ImageUser1}
-              title="Lorem, ipsum dolor sit amet consectetur adipisicing elit"
-            />
+            {forumContent.map((forumContents) => (
+              <ForumLine
+                title={forumContents.title}
+                imageUser1={forumContents.imageUser1}
+                imageUser2={forumContents.imageUser2}
+                imageUser3={forumContents.imageUser3}
+                imageUser4={forumContents.imageUser4}
+                imageUser5={forumContents.imageUser5}
+              />
+            ))}
             <p className="flex justify-center items-center gap-[5px] text-neutral-400 text-sm font-normal self-start">
               <img src={ArowRight} />
-              View All Disscussions Categories
+              مشاهده همه دسته بندی های گفت و گو
             </p>
           </div>
         </div>

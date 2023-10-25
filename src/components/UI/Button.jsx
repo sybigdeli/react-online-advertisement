@@ -1,7 +1,7 @@
 const Button = ({ children, variant, ...props }) => {
   const variants = {
-    fill: "w-[150px] h-[42px] rounded-[20px] bg-primary-500 text-white text-[16px] leading-4",
-    outline: "w-[120px] h-[42px] rounded-[30px] border border-primary-500 text-primary-500 text-[16px] leading-4 transition hover:bg-primary-500 hover:text-white",
+    fill: "px-5 py-3 rounded-xl bg-primary-500 text-white text-md leading-4",
+    outline: "px-5 py-3 rounded-2xl border border-primary-500 text-primary-500 text-md leading-4 transition hover:bg-primary-500 hover:text-white",
   };
 
   return (
