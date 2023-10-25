@@ -1,15 +1,15 @@
-function ForumLine({imageUser1,imageUser2,imageUser3,imageUser4,imageUser5,title}) {
+function ForumLine({title,imageUser1,imageUser2,imageUser3,imageUser4,imageUser5}) {
   return (
     <div className="w-full flex justify-between items-center gap-[10px] p-[10px] rounded-[20px] bg-white shadow py-[5px]">
       <div className="flex flex-row justify-center items-center gap-[10px]">
         <div className="w-12">
           <img className="w-full h-full rounded-full" src={imageUser1} />
         </div>
-        <div className="flex flex-col justify-end items-end gap-[2px]">
+        <div className="flex flex-col gap-[2px]">
           <p className="text-neutral-600 text-sm">
             {title}
           </p>
-          <div className="flex justify-end items-end gap-[12px]">
+          <div className="flex gap-[12px]">
             <span className="text-neutral-600 text-xs">Relocation</span>
             <span className="text-purple-500 text-xs">@randmlee</span>
             <span className="text-zinc-400 text-xs">39 minutes ago</span>
