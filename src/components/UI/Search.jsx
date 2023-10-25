@@ -3,20 +3,21 @@ import DownIcon from "../../assets/icons/down.svg";
 
 function Search({ children, varient }) {
   return (
-    <div className="searchParent w-full h-12 ">
-      <div className="search  w-full h-full px-[10px] rounded-[20px] bg-white border-solid border-2 border-neutral-200 flex justify-between items-center">
+    <div className="searchParent w-full h-12">
+      <div className="search w-full h-full px-3 rounded-3xl overflow-hidden bg-white border-solid border-2 border-neutral-200 flex justify-between items-center">
         <div className="search-category min-w-min flex justify-between ">
-          <span className="">{children}</span>
-          <img src={DownIcon} alt="" />
-          <div className="w-[1px] self-stretch bg-slate-200 rounded-[30px]"></div>
+          <span className="flex flex-wrap text-center text-xs md:text-md">{children}</span>
+          <img src={DownIcon} />
+          <div className="w-[1px] self-stretch bg-slate-200 rounded-5xl"></div>
         </div>
-        <input
-          type="text"
-          value={varient}
-          className="bg-transparent outline-0"
-        />
-
-        <img src={SearchIcon} />
+        <div className="flex items-center">
+          <input
+            type="text"
+            value={varient}
+            className="bg-transparent outline-0 w-full"
+          />
+          <img src={SearchIcon} />
+        </div>
       </div>
     </div>
   );
