@@ -29,8 +29,8 @@ const ProductBox = ({ children }) => {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
+        // onSlideChange={() => console.log("slide change")}
+        // onSwiper={(swiper) => console.log(swiper)}
       >
         {ProductValue.map((i) => {
           return (
