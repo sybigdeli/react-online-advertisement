@@ -5,7 +5,7 @@ const Button = ({ children, variant, ...props }) => {
   };
 
   return (
-    <button className={`${variants[variant]}`} {...props}>
+    <button className={`w-full ${variants[variant]}`} {...props}>
       {children}
     </button>
   );
