@@ -1,17 +1,16 @@
 import HeaderSearch from "@/components/HeaderSearch";
 import ProductBox from "@/components/Product/ProductBox";
 import Footer from "@/components/Footer";
-import { Link } from "react-router-dom";
+import Pagination from "@/components/UI/Pagination";
+// import { Link } from "react-router-dom";
 import Rectangle from "@/components/UI/Rectangle";
 import { useEffect, useState } from "react";
 
 const Search = () => {
   const [click, SetClick] = useState(false);
-
   const handleClick = () => {
     SetClick(true);
   };
-
   useEffect(() => {
     const handleClick = (event) => {
       const isClickInForm = event.target.closest(".rectangle");
@@ -29,7 +28,6 @@ const Search = () => {
       document.body.removeEventListener("click", handleClick);
     };
   }, [click]);
-
   return (
     <>
       <>
@@ -51,7 +49,6 @@ const Search = () => {
             <div className="result-section bg-slate-100 w-full h-[100px] rounded-lg text-[20px] flex justify-center items-center">
               در دست توسعه
             </div>
-
             <div className="grid grid-cols-2 sm:gap-16 md:grid-cols-3 md:gap-4 lg:grid-cols-3 lg:gap-1 xl:grid-cols-4 xl:gap-2">
               <ProductBox>در دست توسعه</ProductBox>
               <ProductBox>در دست توسعه</ProductBox>
@@ -62,9 +59,9 @@ const Search = () => {
               <ProductBox>در دست توسعه</ProductBox>
               <ProductBox>در دست توسعه</ProductBox>
             </div>
+            <Pagination />
           </div>
         </div>
-
         <Footer></Footer>
       </div>
     </>

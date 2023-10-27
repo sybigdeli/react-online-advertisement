@@ -12,7 +12,7 @@ function HeaderSearch({ onClick }) {
         onClick={onClick}
       ></div>
 
-      <div className="flex flex-row items-center justify-center gap-[20px]">
+      <div className="flez flex-row items-center justify-center gap-[20px]">
         <div className="flex flex-row items-center justify-center gap-2">
           <img
             src={DownImage}
@@ -23,7 +23,9 @@ function HeaderSearch({ onClick }) {
           </p>
           <img src={ProfileImage} className="w-full h-full" />
         </div>
-        <Button variant="fill">Create a Post</Button>
+        <div className="hidden">
+          <Button variant="fill">Create a Post</Button>
+        </div>
       </div>
       <div className="hidden lg:flex flex-row items-center justify-end flex-grow gap-[20px]">
         <div className="flex-grow">
