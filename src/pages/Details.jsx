@@ -1,8 +1,8 @@
 import Footer from "@/components/Footer";
 import HeaderSearch from "@/components/HeaderSearch";
 import React, { useState } from "react";
-import rightIcon from "../assets/icons/right.svg";
-import leftIcon from "../assets/icons/left.svg";
+import rightIcon from "@/assets/icons/right.svg";
+import leftIcon from "@/assets/icons/left.svg";
 import byce1 from "@/assets/images/detail1.svg";
 import byce2 from "@/assets/images/detail2.svg";
 import byce3 from "@/assets/images/detail3.svg";

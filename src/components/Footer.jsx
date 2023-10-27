@@ -1,6 +1,6 @@
 import React from "react";
-import appStoreLogo from "../assets/icons/apple-app-store-badge 1.svg";
-import googlePlayLogo from "../assets/icons/Google_Play_Store_badge_EN 1.svg";
+import appStoreLogo from "@/assets/icons/apple-app-store-badge 1.svg";
+import googlePlayLogo from "@/assets/icons/Google_Play_Store_badge_EN 1.svg";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
