@@ -59,16 +59,13 @@ function Ui() {
         imageUser1={ImageUser1}
         imageUser2={ImageUser2}
         imageUser3={ImageUser3}
-        imageUser4={ImageUser4}
+        imageUser4={ImageUser4}ffdcvvbgfd
         imageUser5={ImageUser5}
       />
 
-      <Pagination totalPages={totalPages} onPageChange={handlePageChange} />
-      
-      
-      
       <HeaderSearch />
-      <Footer/>
+      <Footer />
+      <Pagination totalPages={totalPages} onPageChange={handlePageChange} />
     </div>
   );
 }
