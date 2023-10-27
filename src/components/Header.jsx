@@ -4,7 +4,7 @@ import DownImage from "../assets/icons/down.svg";
 
 function Header() {
   return (
-    <div className="w-full hidden md:flex justify-between items-center gap-10 px-16 py-7">
+    <div className="w-full hidden lg:flex justify-between items-center gap-10 px-16 py-7">
       <div className="flex flex-row items-center justify-center gap-5">
         <div className="px-1 flex flex-row items-center justify-center gap-1">
           <img
