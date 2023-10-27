@@ -155,7 +155,7 @@ const forumContent = [
 const HomePage = () => {
   return (
     <div>
-      <header className="flex justify-between items-center py-3 px-2 md:flex-grow md:w-full">
+      <header className="flex justify-between items-center p-3 md:flex-grow md:w-full">
         <button className="w-10 shadow rounded p-2 md:hidden">
           <img src={hamburger} className="w-full"/>
         </button>
@@ -164,7 +164,7 @@ const HomePage = () => {
           <Logo />
         </div>
 
-        <button className="md:hidden">
+        <button className="md:hidden shadow rounded p-2">
           <img src={LoginIcon} />
         </button>
 
