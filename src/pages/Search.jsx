@@ -32,7 +32,7 @@ const Search = () => {
     <>
       <>
         {click && (
-          <div className="rectangle  fixed top-0 right-0 w-1/3 h-full z-10">
+          <div className="rectangle fixed top-0 right-0 w-1/3 h-full z-10">
             <Rectangle></Rectangle>
           </div>
         )}

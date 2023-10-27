@@ -4,8 +4,8 @@ import DownImage from "../assets/icons/down.svg";
 
 function Header() {
   return (
-    <div className="w-full flex justify-between items-center gap-10 px-16 py-7">
-      <div className="flex flex-row items-center justify-center gap-3">
+    <div className="w-full hidden md:flex justify-between items-center gap-10 px-16 py-7">
+      <div className="flex flex-row items-center justify-center gap-5">
         <div className="px-1 flex flex-row items-center justify-center gap-1">
           <img
             src={DownImage}
@@ -25,7 +25,6 @@ function Header() {
             ایران
           </p>
         </div>
-
         <Button variant="fill">ایجاد پست</Button>
         <Button variant="outline">ورود</Button>
       </div>

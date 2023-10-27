@@ -1,9 +1,9 @@
 import Button from "./UI/Button";
 import Logo from "./UI/Logo";
-import DownImage from "../assets/icons/down.svg";
+import DownImage from "@/assets/icons/down.svg";
 import Search from "./UI/Search";
-import MapPin from "../assets/icons/map-pin.svg";
-import ProfileImage from "../assets/images/ProfileImage.svg";
+import MapPin from "@/assets/icons/map-pin.svg";
+import ProfileImage from "@/assets/images/ProfileImage.svg";
 function HeaderSearch({ onClick }) {
   return (
     <div className="w-full flex justify-between items-center gap-10 px-[60px] py-[30px]">
