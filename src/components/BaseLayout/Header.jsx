@@ -1,6 +1,7 @@
 import Button from "@/components/UI/Button";
 import Logo from "@/components/UI/Logo";
 import DownImage from "@/assets/icons/down.svg";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -26,7 +27,9 @@ function Header() {
           </p>
         </div>
         <Button variant="fill">ایجاد پست</Button>
-        <Button variant="outline">ورود</Button>
+        <Button variant="outline">
+          <Link to="/Login">ورود</Link>
+        </Button>
       </div>
 
       <Logo />
