@@ -1,7 +1,7 @@
-import Button from "./UI/Button";
-import Logo from "./UI/Logo";
+import Button from "../UI/Button";
+import Logo from "../UI/Logo";
 import DownImage from "@/assets/icons/down.svg";
-import Search from "./UI/Search";
+import Search from "../UI/Search";
 import MapPin from "@/assets/icons/map-pin.svg";
 import ProfileImage from "@/assets/images/ProfileImage.svg";
 function HeaderSearch({ onClick }) {

@@ -11,19 +11,19 @@ import ImageUser5 from "@/assets/images/user5.svg";
 import RightIcon from "@/assets/icons/right.svg";
 import LeftIcon from "@/assets/icons/left.svg";
 import ArowRight from "@/assets/icons/arrow right.svg";
-import hamburger from '@/assets/icons/hamburger.png';
-import LoginIcon from '@/assets/icons/login-icon.png'
+
 import MapPin from "@/assets/icons/map-pin.svg";
 
-import Header from "@/components/Header";
+import Header from "@/components/BaseLayout/Header";
 import Search from "@/components/UI/Search";
 import Category from "@/components/UI/Category";
 import ForumLine from "@/components/UI/ForumLine";
 import Day from "@/components/UI/Day";
 import EventRow from "@/components/UI/EventRow";
-import Footer from "@/components/Footer";
+import Footer from "@/components/BaseLayout/Footer";
 import City from "@/components/UI/City";
 import Logo from "@/components/UI/Logo";
+import { Link } from "react-router-dom";
 
 const categoriesItems = [
   {
@@ -155,22 +155,6 @@ const forumContent = [
 const HomePage = () => {
   return (
     <div>
-      <header className="flex justify-between items-center p-3 lg:flex-grow lg:w-full">
-        <button className="w-8 md:w-10 shadow rounded p-2 lg:hidden">
-          <img src={hamburger} className="w-full"/>
-        </button>
-
-        <div className="lg:hidden">
-          <Logo />
-        </div>
-
-        <button className="w-8 md:10 lg:hidden shadow rounded p-2">
-          <img src={LoginIcon} />
-        </button>
-
-        <Header />
-      </header>
-
       <section className="w-full px-10 py-20 grid grid-rows-2 gap-y-10 bg-black bg-opacity-60 bg-header-image bg-cover bg-no-repeat">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 text-center  md:text-right mx-auto my-0">
           <h4 className="text-white text-3xl sm:text-5xl font-normal">
@@ -257,7 +241,6 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      <Footer />
     </div>
   );
 };

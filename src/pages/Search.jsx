@@ -1,6 +1,6 @@
-import HeaderSearch from "@/components/HeaderSearch";
+import HeaderSearch from "@/components/BaseLayout/HeaderSearch";
 import ProductBox from "@/components/Product/ProductBox";
-import Footer from "@/components/Footer";
+import Footer from "@/components/BaseLayout/Footer";
 import Pagination from "@/components/UI/Pagination";
 // import { Link } from "react-router-dom";
 import Rectangle from "@/components/UI/Rectangle";
