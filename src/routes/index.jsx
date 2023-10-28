@@ -4,10 +4,17 @@ import Ui from "@/pages/Ui";
 import Search from "@/pages/Search";
 import Details from "@/pages/Details";
 import Login from "@/pages/Login";
+import BaseLayout from "@/components/BaseLayout/BaseLayout";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />,
+    element: <BaseLayout />,
+    children: [
+      {
+        index: true,
+        element: <HomePage />,
+      },
+    ],
   },
   {
     path: "/Login",

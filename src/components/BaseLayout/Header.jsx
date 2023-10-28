@@ -1,6 +1,6 @@
-import Button from "./UI/Button";
-import Logo from "./UI/Logo";
-import DownImage from "../assets/icons/down.svg";
+import Button from "@/components/UI/Button";
+import Logo from "@/components/UI/Logo";
+import DownImage from "@/assets/icons/down.svg";
 
 function Header() {
   return (

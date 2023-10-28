@@ -16,14 +16,14 @@ import Logo from "../components/UI/Logo";
 import ProfileButton from "../components/UI/ProfileButton";
 import Sorting from "../components/UI/Sorting";
 import Day from "../components/UI/Day";
-import Header from "../components/Header";
+import Header from "../components/BaseLayout/Header";
 import Product from "../components/Product/ProductBox";
 import FilterRow from "../components/UI/FilterRow";
 import Category from "../components/UI/Category";
 import ForumLine from "../components/UI/ForumLine";
-import Footer from "../components/Footer";
+import Footer from "../components/BaseLayout/Footer";
 import Pagination from "@/components/UI/Pagination";
-import HeaderSearch from "@/components/HeaderSearch";
+import HeaderSearch from "@/components/BaseLayout/HeaderSearch";
 function Ui() {
   const handlePageChange = (page) => {
     console.log("Page changed:", page);
