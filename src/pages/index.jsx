@@ -156,7 +156,7 @@ const HomePage = () => {
   return (
     <div>
       <header className="flex justify-between items-center p-3 lg:flex-grow lg:w-full">
-        <button className="w-10 shadow rounded p-2 lg:hidden">
+        <button className="w-8 md:w-10 shadow rounded p-2 lg:hidden">
           <img src={hamburger} className="w-full"/>
         </button>
 
@@ -164,7 +164,7 @@ const HomePage = () => {
           <Logo />
         </div>
 
-        <button className="lg:hidden shadow rounded p-2">
+        <button className="w-8 md:10 lg:hidden shadow rounded p-2">
           <img src={LoginIcon} />
         </button>
 
