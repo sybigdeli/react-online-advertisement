@@ -5,12 +5,12 @@ import FormLogin from "@/components/UI/FormLogin";
 import Logo from "@/components/UI/Logo";
 const Login = () => {
   return (
-    <div className="flex flex-col-reverse justify-end h-screen gap-8 md:flex-row md:justify-center md:items-center md:px-8 md:overflow-hidden">
-      <div className="rounded-lg flex flex-col flex-grow justify-center items-center gap-8 px-4">
+    <div className="flex flex-col-reverse justify-end h-screen gap-8 md:flex-row md:justify-center md:items-center md:p-8 md:overflow-hidden">
+      <div className="basis-1/2 rounded-lg flex flex-col flex-grow justify-center items-center gap-8 px-4">
         <div className="w-full flex justify-center items-center">
           <Logo />
         </div>
-        <div className="shadow flex flex-col justify-center items-center gap-6 px-6 py-12">
+        <div className="w-full max-w-md shadow flex flex-col justify-center items-center gap-6 px-6 py-12">
           <h4 className="text-center text-zinc-800 text-xl font-bold">ورود</h4>
           <FormLogin
             inputName="user-name"
@@ -37,9 +37,9 @@ const Login = () => {
         </div>
       </div>
       
-      <div className="object-cover">
+      <div className="basis-1/2 self-stretch relative rounded-3xl overflow-hidden">
         <img src={LoginImageMobile} className="w-full md:hidden" />
-        <img src={LoginImageDesktop} className="hidden w-full md:flex" />
+        <img src={LoginImageDesktop} className="hidden md:block absolute w-full h-full object-cover object-center" />
       </div>
     </div>
   );
