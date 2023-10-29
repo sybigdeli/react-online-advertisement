@@ -1,6 +1,6 @@
 import { useId } from "react";
 
-const FormLogin = ({ inputName, inputType, label, placeHolder, onChange }) => {
+const FormLogin = ({ inputName, inputType, label, placeHolder, onChange ,error}) => {
   const _id = useId;
   const localId = inputName || _id;
   return (
@@ -14,9 +14,12 @@ const FormLogin = ({ inputName, inputType, label, placeHolder, onChange }) => {
         type={inputType}
         id={localId}
         placeholder={placeHolder}
-        className="w-full rounded-3xl border p-2 placeholder:text-zinc-200 text-lg font-normal transition focus:outline-primary-500"
+        className={`w-full rounded-3xl border p-2 placeholder:text-zinc-200 text-lg font-normal transition focus:outline-primary-500 ${error && "border-red-600"}`}
         onChange={onChange}
       />
+      {error && (
+        <div className="text-red-600">{error}</div>
+      )}
     </div>
   );
 };
