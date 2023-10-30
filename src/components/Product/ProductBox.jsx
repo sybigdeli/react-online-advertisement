@@ -1,5 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import propTypes from "prop-types";
+
 
 import Like from "../../assets/icons/Like.svg";
 import Liked from "../../assets/icons/Liked.svg";
