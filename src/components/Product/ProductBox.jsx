@@ -15,7 +15,7 @@ const ProductBox = ({ children, img1, img2, img3, price, title, location }) => {
 
   return (
     <div
-      className="product-box rounded-2xl overflow-hidden m-3 shadow-lg
+      className="product-box max-w-[280px] rounded-2xl overflow-hidden m-3 shadow-lg
     "
     >
       <Swiper
