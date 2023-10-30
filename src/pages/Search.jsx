@@ -5,6 +5,7 @@ import Pagination from "@/components/UI/Pagination";
 // import { Link } from "react-router-dom";
 import Rectangle from "@/components/UI/Rectangle";
 import { useEffect, useState } from "react";
+import Side from "@/components/Side/Side";
 
 const Search = () => {
   const [click, SetClick] = useState(false);
@@ -33,7 +34,7 @@ const Search = () => {
       <>
         {click && (
           <div className="rectangle fixed top-0 right-0 w-1/2 h-full z-10">
-            <Rectangle></Rectangle>
+            <Side />
           </div>
         )}
       </>
@@ -43,7 +44,7 @@ const Search = () => {
         </div>
         <div className="grid grid-cols-5 gap-8">
           <div className="col-span-1 border-l-[1px] hidden lg:flex">
-            <Rectangle></Rectangle>
+            <Side />
           </div>
           <div className="search-content-left grid  col-span-5 lg:col-span-4 ">
             <div className="result-section bg-slate-100 w-full h-[100px] rounded-lg text-[20px] flex justify-center items-center">

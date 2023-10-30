@@ -18,7 +18,7 @@ const ProductBox = ({ children }) => {
 
   return (
     <div
-      className="product-box rounded-[19px] overflow-hidden m-3 shadow-lg
+      className="product-box max-w-[280px] rounded-[19px] overflow-hidden m-3 shadow-lg
     "
     >
       <Swiper
@@ -45,8 +45,8 @@ const ProductBox = ({ children }) => {
           );
         })}
       </Swiper>
-      <div className="product-box__footer p-y[10px] px-[10px] py-[5px] gap-[100px]">
-        <div className="product-box__footer__top flex justify-between font-bold text-textColor-900">
+      <div className="product-box__footer p-4 flex gap-2 flex-col ">
+        <div className="product-box__footer__top flex justify-between font-bold text-textColor-200">
           <span>{children}</span>
           <img
             src={handleLiked ? Liked : Like}
