@@ -8,9 +8,7 @@ import "swiper/css/pagination";
 
 import "./Product.css";
 import { useState } from "react";
-const ProductBox = ({ children, img1, img2, img3, price, title, location }) => {
-  const ProductValue = [img1, img2, img3];
-
+const ProductBox = ({ children, img, price, title, location }) => {
   const [handleLiked, SetHandleLiked] = useState(false);
 
   return (
@@ -34,7 +32,7 @@ const ProductBox = ({ children, img1, img2, img3, price, title, location }) => {
         // onSlideChange={() => console.log("slide change")}
         // onSwiper={(swiper) => console.log(swiper)}
       >
-        {ProductValue.map((i) => {
+        {img.map((i) => {
           return (
             <SwiperSlide key={i.length}>
               <img src={i} alt="" className="w-full" />
