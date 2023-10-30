@@ -1,3 +1,4 @@
+import propTypes from "prop-types";
 function SideItem({ title, icon, selected, onClick, subCat }) {
   return (
     <div>
@@ -14,5 +15,10 @@ function SideItem({ title, icon, selected, onClick, subCat }) {
     </div>
   );
 }
-
+SideItem.propTypes = {
+  title : propTypes.string,
+  icon : propTypes.string,
+  onClick : propTypes.func,
+  subCat : propTypes.string,
+}
 export default SideItem;

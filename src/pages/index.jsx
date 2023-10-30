@@ -113,43 +113,28 @@ const eventsText = [
 const forumContent = [
   {
     title: "هر کس هست سلام.",
-    imageUser1: ImageUser1,
-    imageUser2: ImageUser2,
-    imageUser3: ImageUser3,
-    imageUser4: ImageUser4,
-    imageUser5: ImageUser5,
+    imageUsers: [ImageUser1, ImageUser2, ImageUser3],
+    contactUserImage: ImageUser4,
   },
   {
-    title: "هندوانه ای که خریدم داخلش موز بود.",
-    imageUser1: ImageUser1,
-    imageUser2: ImageUser2,
-    imageUser3: ImageUser3,
-    imageUser4: ImageUser4,
-    imageUser5: ImageUser5,
+    title: "هر کس هست سلام.",
+    imageUsers: [ImageUser1, ImageUser2],
+    contactUserImage: ImageUser3,
   },
   {
-    title: "پول زور وَ ده",
-    imageUser1: ImageUser1,
-    imageUser2: ImageUser2,
-    imageUser3: ImageUser3,
-    imageUser4: ImageUser4,
-    imageUser5: ImageUser5,
+    title: "هر کس هست سلام.",
+    imageUsers: [ImageUser1, ImageUser2, ImageUser3, ImageUser4],
+    contactUserImage: ImageUser5,
   },
   {
-    title: "ها این که وَگویی یعنی چه",
-    imageUser1: ImageUser1,
-    imageUser2: ImageUser2,
-    imageUser3: ImageUser3,
-    imageUser4: ImageUser4,
-    imageUser5: ImageUser5,
+    title: "هر کس هست سلام.",
+    imageUsers: [ImageUser2, ImageUser3],
+    contactUserImage: ImageUser1,
   },
   {
-    title: "یکی برسه به دادم",
-    imageUser1: ImageUser1,
-    imageUser2: ImageUser2,
-    imageUser3: ImageUser3,
-    imageUser4: ImageUser4,
-    imageUser5: ImageUser5,
+    title: "هر کس هست سلام.",
+    imageUsers: [ImageUser1, ImageUser3, ImageUser4],
+    contactUserImage: ImageUser2,
   },
 ];
 const HomePage = () => {
@@ -178,7 +163,11 @@ const HomePage = () => {
 
         <div className="w-full grid gird-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {categoriesItems.map((categories, index) => (
-            <Category image={categories.image} text={categories.text} />
+            <Category
+              key={index}
+              image={categories.image}
+              text={categories.text}
+            />
           ))}
         </div>
       </section>
@@ -227,11 +216,8 @@ const HomePage = () => {
             {forumContent.map((forumContents) => (
               <ForumLine
                 title={forumContents.title}
-                imageUser1={forumContents.imageUser1}
-                imageUser2={forumContents.imageUser2}
-                imageUser3={forumContents.imageUser3}
-                imageUser4={forumContents.imageUser4}
-                imageUser5={forumContents.imageUser5}
+                imageUsers={forumContents.imageUsers.map((i) => i)}
+                contactUserImage={forumContents.contactUserImage}
               />
             ))}
             <p className="flex justify-center items-center gap-[5px] text-neutral-400 text-sm font-normal self-start">

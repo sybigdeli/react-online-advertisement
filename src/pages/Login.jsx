@@ -33,7 +33,7 @@ const Login = () => {
       </div>
 
       <div className="basis-1/2 self-stretch relative rounded-3xl overflow-hidden">
-        <img src={LoginImageMobile} className="w-full md:hidden" />
+        <img src={LoginImageMobile} className="w-full md:hidden absolute h-full object-cover object-center" />
         <img
           src={LoginImageDesktop}
           className="hidden md:block absolute w-full h-full object-cover object-center"
