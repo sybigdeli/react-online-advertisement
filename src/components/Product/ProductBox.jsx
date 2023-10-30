@@ -60,4 +60,11 @@ const ProductBox = ({ children, img, price, title, location }) => {
   );
 };
 
+ProductBox.propTypes = {
+  children: propTypes.node,
+  img: propTypes.string,
+  price: propTypes.string,
+  title: propTypes.string,
+  location: propTypes.string,
+};
 export default ProductBox;
