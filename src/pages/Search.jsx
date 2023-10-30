@@ -6,6 +6,7 @@ import HeaderSearch from "@/components/BaseLayout/HeaderSearch";
 import ProductBox from "@/components/Product/ProductBox";
 import Footer from "@/components/BaseLayout/Footer";
 import Pagination from "@/components/UI/Pagination";
+import propTypes from "prop-types";
 // import { Link } from "react-router-dom";
 
 import { useEffect, useState } from "react";

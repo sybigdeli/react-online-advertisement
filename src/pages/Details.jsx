@@ -60,15 +60,24 @@ function Details() {
           </div>
         </div>
 
-        <div className="">
-        dsafsafadsf
-        </div>
+        <div className="">dsafsafadsf</div>
       </div>
       <div dir="" className=" justify-center items-center px-[130px] pt-[40px]">
-                  <div>
-                    <h3>Details</h3>
-                    <p className="pt-3 font-estedadLighter ">I am selling my Medium 54cm Trek Alpha 1.2 Endurance / Road Bike. This bike is in like new condition with extremely low mileage and it just received a full tune up! It shifts smoothly and the brakes are nice and tight. This bike makes working out an absolute delight and it can handle any paved terrain Austin has to offer! <br/><br/> It features a 54cm medium sized, super light aluminum frame, a carbon fiber fork, an 18-speed Shimano Sora/Tiagra groupset and 700x23c tires/wheels.<br/><br/> Without a doubt, this is the PERFECT bike for Austin!</p>
-                  </div>
+        <div>
+          <h3>Details</h3>
+          <p className="pt-3 font-estedadLighter ">
+            I am selling my Medium 54cm Trek Alpha 1.2 Endurance / Road Bike.
+            This bike is in like new condition with extremely low mileage and it
+            just received a full tune up! It shifts smoothly and the brakes are
+            nice and tight. This bike makes working out an absolute delight and
+            it can handle any paved terrain Austin has to offer! <br />
+            <br /> It features a 54cm medium sized, super light aluminum frame,
+            a carbon fiber fork, an 18-speed Shimano Sora/Tiagra groupset and
+            700x23c tires/wheels.
+            <br />
+            <br /> Without a doubt, this is the PERFECT bike for Austin!
+          </p>
+        </div>
       </div>
 
       <footer className=" w-full bottom-0 h-[191px] pt-4">
