@@ -1,5 +1,7 @@
 import SearchIcon from "../../assets/icons/search.svg";
 import DownIcon from "../../assets/icons/down.svg";
+import propTypes from "prop-types";
+
 
 function Search({ children, varient }) {
   return (
@@ -24,5 +26,8 @@ function Search({ children, varient }) {
     </div>
   );
 }
-
+Search.propTypes = {
+  children : propTypes.node,
+  varient : propTypes.string,
+}
 export default Search;

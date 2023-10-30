@@ -1,4 +1,5 @@
 import DownImage from '../../assets/icons/down.svg'
+import propTypes from "prop-types";
 function Sorting({text}) {
   return (
     <div className='w-fit flex items-center pl-[14px] pr-[8px] py-[10px] rounded-[10px] border-gray-400 border-[1px]'>
@@ -7,5 +8,7 @@ function Sorting({text}) {
     </div>
   )
 }
-
+Sorting.propTypes = {
+  text : propTypes.string,
+}
 export default Sorting

@@ -1,3 +1,4 @@
+import propTypes from "prop-types";
 function Category({ image, text }) {
     const ratio = 200/264 *100
 
@@ -14,6 +15,11 @@ function Category({ image, text }) {
       </div>
     </div>
   );
+}
+
+Category.propTypes = {
+  image : propTypes.string,
+  text : propTypes.string,
 }
 
 export default Category;

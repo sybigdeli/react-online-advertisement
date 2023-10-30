@@ -1,6 +1,15 @@
 import { useId } from "react";
+import propTypes from "prop-types";
 
-const FormLogin = ({ inputName, inputType, label, placeHolder, onChange ,error}) => {
+const FormLogin = ({
+  inputName,
+  inputType,
+  label,
+  placeHolder,
+  onChange,
+  error,
+  value,
+}) => {
   const _id = useId;
   const localId = inputName || _id;
   return (
@@ -14,14 +23,25 @@ const FormLogin = ({ inputName, inputType, label, placeHolder, onChange ,error})
         type={inputType}
         id={localId}
         placeholder={placeHolder}
-        className={`w-full rounded-3xl border p-2 placeholder:text-zinc-200 text-lg font-normal transition focus:outline-primary-500 ${error && "border-red-600"}`}
+        value={value}
+        className={`w-full rounded-3xl border p-2 placeholder:text-zinc-200 text-lg font-normal transition focus:outline-primary-500 ${
+          error && "border-red-600"
+        }`}
         onChange={onChange}
       />
-      {error && (
-        <div className="text-red-600">{error}</div>
-      )}
+      {error && <div className="text-red-600">{error}</div>}
     </div>
   );
+};
+
+FormLogin.propTypes = {
+  inputName: propTypes.string,
+  inputType: propTypes.string,
+  label: propTypes.string,
+  placeHolder: propTypes.string,
+  onChange: propTypes.func,
+  error: propTypes.string,
+  value: propTypes.string,
 };
 
 export default FormLogin;

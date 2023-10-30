@@ -1,3 +1,4 @@
+import propTypes from "prop-types";
 function Day({day , date}) {
   return (
     <div className="py-4 bg-neutral-50 rounded-xl border border-zinc-300 flex-col justify-start items-start inline-flex">
@@ -6,5 +7,8 @@ function Day({day , date}) {
     </div>
   )
 }
-
+Day.propTypes = {
+  city : propTypes.string,
+  country : propTypes.string,
+}
 export default Day

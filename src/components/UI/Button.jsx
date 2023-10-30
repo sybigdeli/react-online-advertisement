@@ -1,3 +1,4 @@
+import propTypes from "prop-types";
 const Button = ({ children, variant, ...props }) => {
   const variants = {
     fill: "px-5 py-3 rounded-xl bg-primary-500 text-white text-md leading-4",
@@ -10,5 +11,8 @@ const Button = ({ children, variant, ...props }) => {
     </button>
   );
 };
-
+Button.propTypes = {
+  children : propTypes.node,
+  variant : propTypes.string,
+}
 export default Button;

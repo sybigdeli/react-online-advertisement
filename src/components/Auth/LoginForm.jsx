@@ -9,7 +9,6 @@ function LoginForm() {
   });
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(loginForm);
   };
 
   const handleChangeLoginForm = (e , key) => {
