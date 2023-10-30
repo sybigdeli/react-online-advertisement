@@ -1,3 +1,7 @@
+import Img1 from "@/assets/images/7.png";
+import Img2 from "@/assets/images/8.png";
+import Img3 from "@/assets/images/9.png";
+
 import HeaderSearch from "@/components/BaseLayout/HeaderSearch";
 import ProductBox from "@/components/Product/ProductBox";
 import Footer from "@/components/BaseLayout/Footer";
@@ -5,6 +9,73 @@ import Pagination from "@/components/UI/Pagination";
 // import { Link } from "react-router-dom";
 import Rectangle from "@/components/UI/Rectangle";
 import { useEffect, useState } from "react";
+
+  const productBoxData = [
+    {
+      img1 : Img1,
+      img2 : Img2,
+      img3 : Img3,
+      price : "129$",
+      title : "Medium 19 inch Carbon Disc Hybrid Bicycle",
+      location : "Austin , TX"
+    },
+    {
+      img1 : Img1,
+      img2 : Img2,
+      img3 : Img3,
+      price : "129$",
+      title : "Medium 19 inch Carbon Disc Hybrid Bicycle",
+      location : "Austin , TX"
+    },
+    {
+      img1 : Img1,
+      img2 : Img2,
+      img3 : Img3,
+      price : "129$",
+      title : "Medium 19 inch Carbon Disc Hybrid Bicycle",
+      location : "Austin , TX"
+    },
+    {
+      img1 : Img1,
+      img2 : Img2,
+      img3 : Img3,
+      price : "129$",
+      title : "Medium 19 inch Carbon Disc Hybrid Bicycle",
+      location : "Austin , TX"
+    },
+    {
+      img1 : Img1,
+      img2 : Img2,
+      img3 : Img3,
+      price : "129$",
+      title : "Medium 19 inch Carbon Disc Hybrid Bicycle",
+      location : "Austin , TX"
+    },
+    {
+      img1 : Img1,
+      img2 : Img2,
+      img3 : Img3,
+      price : "129$",
+      title : "Medium 19 inch Carbon Disc Hybrid Bicycle",
+      location : "Austin , TX"
+    },
+    {
+      img1 : Img1,
+      img2 : Img2,
+      img3 : Img3,
+      price : "129$",
+      title : "Medium 19 inch Carbon Disc Hybrid Bicycle",
+      location : "Austin , TX"
+    },
+    {
+      img1 : Img1,
+      img2 : Img2,
+      img3 : Img3,
+      price : "129$",
+      title : "Medium 19 inch Carbon Disc Hybrid Bicycle",
+      location : "Austin , TX"
+    },
+  ]
 
 const Search = () => {
   const [click, SetClick] = useState(false);
@@ -50,14 +121,10 @@ const Search = () => {
               در دست توسعه
             </div>
             <div className="grid grid-cols-2 sm:gap-16 md:grid-cols-3 md:gap-4 lg:grid-cols-3 lg:gap-1 xl:grid-cols-4 xl:gap-2">
-              <ProductBox>در دست توسعه</ProductBox>
-              <ProductBox>در دست توسعه</ProductBox>
-              <ProductBox>در دست توسعه</ProductBox>
-              <ProductBox>در دست توسعه</ProductBox>
-              <ProductBox>در دست توسعه</ProductBox>
-              <ProductBox>در دست توسعه</ProductBox>
-              <ProductBox>در دست توسعه</ProductBox>
-              <ProductBox>در دست توسعه</ProductBox>
+              {productBoxData.map((product) => (
+                <ProductBox img1={product.img1} img2={product.img2} img3={product.img3} price={product.price} title={product.title} location={product.location}/>
+              ))}
+
             </div>
             <Pagination />
           </div>
