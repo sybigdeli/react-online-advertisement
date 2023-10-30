@@ -1,17 +1,31 @@
 import Button from "@/components/UI/Button";
 import FormLogin from "@/components/UI/FormLogin";
+import { z } from "zod";
 import { useState } from "react";
+
+const registerSchema = z.object({
+  username: z.string().min(4 , {message: "نام کاربری باید حداقل 4 نویسه باشد"}),
+  password: z.string().min(8 , {message: "نام کاربری باید حداقل 8 نویسه باشد"}),
+});
 
 function LoginForm() {
   const [loginForm, setLoginForm] = useState({
     username: "",
     password: "",
   });
+  const [error, setError] = useState({});
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    const validation = registerSchema.safeParse(loginForm);
+
+    if(!validation.success) {
+      setError(validation.error.format())
+    }
   };
 
   const handleChangeLoginForm = (e , key) => {
+    setError((s) => ({ ...s, [key]: null }));
     setLoginForm((s) => ({...s , [key] : e.target.value}))
   }
   return (
@@ -23,6 +37,7 @@ function LoginForm() {
       <FormLogin
         inputName="user-name"
         inputType="text"
+        error={error.username?._errors?.[0]}
         label="نام کاربری"
         placeHolder="نام کاربری خود را وارد کنید"
         value={loginForm.username}
@@ -31,6 +46,7 @@ function LoginForm() {
       <FormLogin
         inputName="user-pass"
         inputType="password"
+        error={error.password?._errors?.[0]}
         label="رمز عبور"
         placeHolder="رمز عبور خود را وارد کنید"
         value={loginForm.password}

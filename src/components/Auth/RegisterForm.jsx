@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { z } from "zod";
 import FormLogin from "@/components/UI/FormLogin";
 import Button from "../UI/Button";
+import { useState } from "react";
+import { z } from "zod";
 
 const registerSchema = z.object({
   username: z.string().min(4 , {message: "نام کاربری باید حداقل 4 نویسه باشد"}),
