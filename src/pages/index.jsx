@@ -117,22 +117,22 @@ const forumContent = [
     contactUserImage: ImageUser4,
   },
   {
-    title: "هر کس هست سلام.",
+    title: "متوجه شدم",
     imageUsers: [ImageUser1, ImageUser2],
     contactUserImage: ImageUser3,
   },
   {
-    title: "هر کس هست سلام.",
+    title: "در بحش پرداخت مشکل دارم",
     imageUsers: [ImageUser1, ImageUser2, ImageUser3, ImageUser4],
     contactUserImage: ImageUser5,
   },
   {
-    title: "هر کس هست سلام.",
+    title: "یه کیک واگعی میخوام",
     imageUsers: [ImageUser2, ImageUser3],
     contactUserImage: ImageUser1,
   },
   {
-    title: "هر کس هست سلام.",
+    title: "یکی برسه به دادم",
     imageUsers: [ImageUser1, ImageUser3, ImageUser4],
     contactUserImage: ImageUser2,
   },
