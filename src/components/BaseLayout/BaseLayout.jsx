@@ -17,7 +17,7 @@ function BaseLayout() {
           <Logo />
         </div>
 
-        <Link to="/Login" className="w-8 md:10 lg:hidden shadow rounded p-2">
+        <Link to="/auth" className="w-8 md:10 lg:hidden shadow rounded p-2">
           <img src={LoginIcon} />
         </Link>
 

@@ -28,7 +28,7 @@ function Header() {
         </div>
         <Button variant="fill">ایجاد پست</Button>
         <Button variant="outline">
-          <Link to="/Login">ورود</Link>
+          <Link to="/auth">ورود</Link>
         </Button>
       </div>
 
