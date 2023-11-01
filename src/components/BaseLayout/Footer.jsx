@@ -36,14 +36,14 @@ const Footer = () => {
   return (
     <footer
       dir="ltr"
-      className="px-5 md:px-20 gap-6 md:gap-3 bg-primary-400 border border-primary-600 pt-10"
+      className="px-5 md:px-20 gap-6 md:gap-3 bg-slate-100 border border-primary-600 pt-10"
     >
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="grid gap-6">
           <h3 className="text-lg text-textColor-600">{footerData[0].title}</h3>
           <ul className="grid grid-cols-2 grid-rows-3 gap-4 gap-x-10 text-lg text-textColor-200">
-            {footerData[0].rows.map((row) => (
-              <li className="">
+            {footerData[0].rows.map((row , index) => (
+              <li key={index} className="">
                 <Link>{row}</Link>
               </li>
             ))}
