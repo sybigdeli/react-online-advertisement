@@ -4,9 +4,11 @@ import Button from "../UI/Button";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { registerSchema } from "@/components/Auth/schema";
+import { useAuthContext } from "@/providers/AuthProvider";
 
 function RegisterForm() {
   const [unknownError, setUnknownError] = useState(null);
+  const { saveAccessToken } = useAuthContext();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState({});
   const [RegisterForm, setRegisterForm] = useState({
@@ -37,10 +39,11 @@ function RegisterForm() {
       setLoading(true);
 
       const result = await axios.post(
-        "https://jsonplaceholder.typicode.com/posts",
+        "http://demo2578450.mockable.io/auth/register",
         data
       );
       console.log(result);
+      saveAccessToken(result.data.token.accessToken);
     } catch (error) {
       console.log(error);
       setUnknownError("خطایی در ثبت نام رخ داده است");
