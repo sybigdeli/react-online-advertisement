@@ -13,10 +13,15 @@ export default {
       },
       colors: {
         primary: {
-          200: "#B160FB",
+          100: "#ebd8fc",
+          200: "#d8b2fb",
+          300: "#cd98fe",
+          400: "#be7cfa",
           500: "#B160FB",
-          400: "#F5F5F5",
-          600:"#E6E6E6"
+          600: "#a342fc",
+          700:"#992bfe",
+          800:"#8e14fd",
+          900:"#8500ff",
         },
         textColor: {
           100: "#AAAAAA",
