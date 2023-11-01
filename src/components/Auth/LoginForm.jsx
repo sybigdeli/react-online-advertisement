@@ -2,10 +2,15 @@ import Button from "@/components/UI/Button";
 import FormLogin from "@/components/UI/FormLogin";
 import { z } from "zod";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const registerSchema = z.object({
-  username: z.string().min(4 , {message: "نام کاربری باید حداقل 4 نویسه باشد"}),
-  password: z.string().min(8 , {message: "نام کاربری باید حداقل 8 نویسه باشد"}),
+  username: z
+    .string()
+    .min(4, { message: "نام کاربری باید حداقل 4 نویسه باشد" }),
+  password: z
+    .string()
+    .min(8, { message: "نام کاربری باید حداقل 8 نویسه باشد" }),
 });
 
 function LoginForm() {
@@ -19,15 +24,15 @@ function LoginForm() {
 
     const validation = registerSchema.safeParse(loginForm);
 
-    if(!validation.success) {
-      setError(validation.error.format())
+    if (!validation.success) {
+      setError(validation.error.format());
     }
   };
 
-  const handleChangeLoginForm = (e , key) => {
+  const handleChangeLoginForm = (e, key) => {
     setError((s) => ({ ...s, [key]: null }));
-    setLoginForm((s) => ({...s , [key] : e.target.value}))
-  }
+    setLoginForm((s) => ({ ...s, [key]: e.target.value }));
+  };
   return (
     <form
       onSubmit={(event) => handleSubmit}
@@ -57,9 +62,15 @@ function LoginForm() {
           رمز عبور خود را فراموش کرده اید؟
         </p>
       </div>
-      <Button variant="fill" onClick={handleSubmit}>
+      <Button type="submit" variant="fill" onClick={handleSubmit}>
         ورود
       </Button>
+      <div className="flex flex-warp justify-center items-center gap-1.5">
+        <p className="text-center">حساب کاربری ندارید ؟</p>
+        <Link to="/auth/sign-up" className="text-center">
+          ایجاد حساب کاربری
+        </Link>
+      </div>
     </form>
   );
 }
