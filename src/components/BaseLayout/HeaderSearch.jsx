@@ -8,7 +8,8 @@ import { useAuthContext } from "@/providers/AuthProvider";
 import { Link } from "react-router-dom";
 
 function HeaderSearch({ onClick }) {
-  const { isLoggedIn, CurrentUser, logout } = useAuthContext();
+  const { logout, CurrentUser, loadingCurrentUser, isLoggedIn } =
+    useAuthContext();
   return (
     <div className="w-full flex justify-between items-center gap-10 px-[60px] py-[30px]">
       <div
@@ -20,6 +21,14 @@ function HeaderSearch({ onClick }) {
         <div className="flex flex-row items-center justify-center gap-2">
           {isLoggedIn ? (
             <div className="flex justify-center items-center gap-4 px-4 py-2 border-primary-600 border rounded-3xl">
+              {loadingCurrentUser ? (
+                <div className="w-10 h-10 p-5 bg-slate-300 rounded-full animate-pulse"></div>
+              ) : (
+                <img
+                  src={CurrentUser?.avatar}
+                  className="w-10 h-10 rounded-full"
+                />
+              )}
               <img
                 src={DownImage}
                 className="opacity-50 flex-col justify-start items-start"
@@ -27,7 +36,7 @@ function HeaderSearch({ onClick }) {
               <p className="text-right text-black text-sm tracking-tight">
                 liludori
               </p>
-              <img src={CurrentUser?.avatar} className="w-10 h-10 rounded-full" />
+
               <Button variant="fill" onClick={logout}>
                 خروج از حساب
               </Button>
