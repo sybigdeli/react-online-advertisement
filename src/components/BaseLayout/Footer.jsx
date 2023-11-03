@@ -52,8 +52,8 @@ const Footer = () => {
         <div className="grid gap-6">
           <h3 className="text-lg text-textColor-600">{footerData[1].title}</h3>
           <ul className="grid grid-cols-3 grid-rows-3 gap-4">
-            {footerData[1].rows.map((row) => (
-              <li>
+            {footerData[1].rows.map((row , index) => (
+              <li key={index}>
                 <a href=""> {row}</a>{" "}
               </li>
             ))}
