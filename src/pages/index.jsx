@@ -190,14 +190,14 @@ const HomePage = () => {
             </div>
 
             <div className="w-full grid grid-cols-5 grid-rows-2 justify-center items-center gap-3">
-              {calenderDates.map((calender) => (
-                <Day day={calender.day} date={calender.date} />
+              {calenderDates.map((calender, index) => (
+                <Day key={index} day={calender.day} date={calender.date} />
               ))}
             </div>
 
             <div className="w-full flex flex-col justify-center items-center gap-[10px]">
-              {eventsText.map((events) => (
-                <EventRow EventText={events.eventText} />
+              {eventsText.map((events, index) => (
+                <EventRow key={index} EventText={events.eventText} />
               ))}
             </div>
 
@@ -213,8 +213,9 @@ const HomePage = () => {
             تالارهای بحث و گفتگو
           </p>
           <div className="w-full flex flex-grow flex-col p-5 bg-white rounded-2xl shadow border border-gray-200 justify-center items-center gap-4">
-            {forumContent.map((forumContents) => (
+            {forumContent.map((forumContents, index) => (
               <ForumLine
+                key={index}
                 title={forumContents.title}
                 imageUsers={forumContents.imageUsers.map((i) => i)}
                 contactUserImage={forumContents.contactUserImage}
