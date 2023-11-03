@@ -17,7 +17,7 @@ const AuthProvider = ({ children }) => {
   const isLoggedIn = !!accessToken;
 
   const saveAccessToken = (token) => {
-    localStorage.getItem("accessToken", token);
+    localStorage.setItem("accessToken", token);
     setAccessToken(token);
   };
 
