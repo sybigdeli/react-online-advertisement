@@ -3,6 +3,8 @@ import FormLogin from "@/components/UI/FormLogin";
 import { z } from "zod";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { useAuthContext } from "@/providers/AuthProvider";
 
 const registerSchema = z.object({
   username: z
@@ -18,14 +20,34 @@ function LoginForm() {
     username: "",
     password: "",
   });
+  const [unknownError, setUnknownError] = useState(null);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState({});
-  const handleSubmit = (event) => {
+  const { saveAccessToken } = useAuthContext();
+  const handleSubmit = async (event) => {
     event.preventDefault();
-
+    setUnknownError(null);
     const validation = registerSchema.safeParse(loginForm);
 
     if (!validation.success) {
       setError(validation.error.format());
+      return;
+    }
+
+    try {
+      setLoading(true);
+
+      const result = await axios.post(
+        "https://6544e9685a0b4b04436d3239.mockapi.io/api/", //"http://demo2578450.mockable.io/auth/login",
+        validation.data
+      );
+      console.log(result);
+      saveAccessToken(result.data.token.accessToken);
+    } catch (error) {
+      console.log(error);
+      setUnknownError("خطایی در ثبت نام رخ داده است");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -33,6 +55,7 @@ function LoginForm() {
     setError((s) => ({ ...s, [key]: null }));
     setLoginForm((s) => ({ ...s, [key]: e.target.value }));
   };
+
   return (
     <form
       onSubmit={(event) => handleSubmit}
