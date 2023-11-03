@@ -19,7 +19,7 @@ function HeaderSearch({ onClick }) {
       <div className="flex flex-row items-center justify-center gap-[20px]">
         <div className="flex flex-row items-center justify-center gap-2">
           {isLoggedIn ? (
-            <div>
+            <div className="flex justify-center items-center gap-4 px-4 py-2 border-primary-600 border rounded-3xl">
               <img
                 src={DownImage}
                 className="opacity-50 flex-col justify-start items-start"
@@ -28,7 +28,7 @@ function HeaderSearch({ onClick }) {
                 liludori
               </p>
               <img src={CurrentUser?.avatar} className="w-10 h-10 rounded-full" />
-              <Button variant="outline" onClick={logout}>
+              <Button variant="fill" onClick={logout}>
                 خروج از حساب
               </Button>
             </div>
