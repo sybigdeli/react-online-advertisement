@@ -23,7 +23,7 @@ const Footer = () => {
       rows: [
         "Abuse & Legal",
         "Feedback",
-        "Avoiding Scams & Fraud",
+        "Avoiding Scams",
         "Personal Safety Tips",
         "Abuse & Legal",
         "Privacy Policy",
@@ -36,13 +36,13 @@ const Footer = () => {
   return (
     <footer
       dir="ltr"
-      className="px-5 md:px-20 gap-6 md:gap-3 bg-slate-100 border border-primary-600 pt-10"
+      className="px-5 md:px-20 gap-6 md:gap-3 bg-primary-1100  pt-10"
     >
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="grid gap-6">
           <h3 className="text-lg text-textColor-600">{footerData[0].title}</h3>
-          <ul className="grid grid-cols-2 grid-rows-3 gap-4 gap-x-10 text-lg text-textColor-200">
-            {footerData[0].rows.map((row , index) => (
+          <ul className="grid grid-cols-2 grid-rows-3 gap-4 text-lg text-textColor-200">
+            {footerData[0].rows.map((row, index) => (
               <li key={index} className="">
                 <Link>{row}</Link>
               </li>
@@ -51,8 +51,8 @@ const Footer = () => {
         </div>
         <div className="grid gap-6">
           <h3 className="text-lg text-textColor-600">{footerData[1].title}</h3>
-          <ul className="grid grid-cols-3 grid-rows-3 gap-4">
-            {footerData[1].rows.map((row , index) => (
+          <ul className="grid grid-cols-3 grid-rows-3 gap-4 ">
+            {footerData[1].rows.map((row, index) => (
               <li key={index}>
                 <a href=""> {row}</a>{" "}
               </li>
@@ -71,10 +71,9 @@ const Footer = () => {
         </div>
       </div>
       <div className="">
-        <div className="h-1 w-full bg-primary-600 mt-20"></div>
-        <div className=" flex font-estedadLighter  justify-center my-5">
-          2021 Craigstlist
-        </div>
+        <div className="h-1 w-full bg-primary-1000 mt-20"></div>
+        <div className=" flex font-semibold  justify-center my-5">
+        © 2021 Craigslist        </div>
       </div>
     </footer>
   );
