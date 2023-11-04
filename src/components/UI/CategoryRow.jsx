@@ -1,3 +1,4 @@
+import propTypes from "prop-types";
 function CategoryRow({ image, text }) {
   return (
     <div className="md:flex justify-center items-start gap-[15px]">
@@ -9,5 +10,8 @@ function CategoryRow({ image, text }) {
     </div>
   );
 }
-
+CategoryRow.propTypes = {
+  image : propTypes.string,
+  variant : propTypes.string,
+}
 export default CategoryRow;

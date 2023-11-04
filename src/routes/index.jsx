@@ -1,22 +1,32 @@
 import { createBrowserRouter } from "react-router-dom";
-import HomePage from "../pages/index";
-import ProfilePage from "../pages/Profile";
-import AuthPage from "../pages/Auth";
-import Ui from "../pages/Ui";
-import Search from "../pages/Search";
+import HomePage from "@/pages/index";
+import Ui from "@/pages/Ui";
+import Search from "@/pages/Search";
 import Details from "@/pages/Details";
+import BaseLayout from "@/components/BaseLayout/BaseLayout";
+import Auth from "@/pages/Auth";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />,
+    element: <BaseLayout />,
+    children: [
+      {
+        index: true,
+        element: <HomePage />,
+      },
+    ],
   },
   {
-    path: "/Login",
-    element: <AuthPage />,
+    path: "/auth",
+    element: <Auth />,
   },
   {
-    path: "/Profile",
-    element: <ProfilePage />,
+    path: "/auth/sign-in",
+    element: <Auth key="sign-in" mode="sign-in"/>,
+  },
+  {
+    path: "/auth/sign-up",
+    element: <Auth key="sign-up" mode="sign-up"/>,
   },
   {
     path: "/ui",
@@ -27,8 +37,8 @@ const router = createBrowserRouter([
     element: <Search />,
   },
   {
-    path:"/Details",
-    element:<Details/>
-  }
+    path: "/Details",
+    element: <Details />,
+  },
 ]);
 export default router;
