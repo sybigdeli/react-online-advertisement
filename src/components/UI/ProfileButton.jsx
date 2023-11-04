@@ -1,11 +1,11 @@
 import React from "react";
 
-function ProfileButton(profileLink) {
+function ProfileButton({ profileLink, children }) {
   return (
     <a href={profileLink}>
-      <button className="w-full h-full bg-white rounded-2xl border border-purple-500 items-center justify-center flex ">
-        <div className="ViewProfile w-20 h-4 text-right text-purple-500 text-sm font-sans font-['Euclid Circular B'] leading-none tracking-tight">
-          View Profile
+      <button className="w-full h-full bg-white rounded-2xl border border-purple-500 items-center justify-center">
+        <div className=" w-full p-4 items-center h-4 text-right text-purple-500 text-sm font-sans leading-none tracking-tight flex">
+          {children}
         </div>
       </button>
     </a>
@@ -13,3 +13,4 @@ function ProfileButton(profileLink) {
 }
 
 export default ProfileButton;
+
