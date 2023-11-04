@@ -10,6 +10,7 @@ const useAuthContext = () => {
 
 const AuthProvider = ({ children }) => {
   const [CurrentUser, setCurrentUser] = useState(null);
+  const [loadingCurrentUser, setLoadingCurrentUser] = useState(false);
   const [accessToken, setAccessToken] = useState(() =>
     localStorage.getItem("accessToken")
   );
@@ -27,13 +28,22 @@ const AuthProvider = ({ children }) => {
   };
 
   const fetchCurrentUser = async () => {
-    const result = await axios.get("http://demo2578450.mockable.io/auth/me", {
-      headers: {
-        Authorization: accessToken,
-      },
-    });
+    if (loadingCurrentUser) return;
 
-    setCurrentUser(result.data);
+    try {
+      setLoadingCurrentUser(true);
+
+      const result = await axios.get("http://demo2578450.mockable.io/auth/me", {
+        headers: {
+          Authorization: accessToken,
+        },
+      });
+      setCurrentUser(result.data);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoadingCurrentUser(false);
+    }
   };
 
   useEffect(() => {
@@ -46,6 +56,7 @@ const AuthProvider = ({ children }) => {
     logout,
     saveAccessToken,
     CurrentUser,
+    loadingCurrentUser,
     isLoggedIn: !!accessToken,
   };
   return <authContext.Provider value={values}>{children}</authContext.Provider>;
