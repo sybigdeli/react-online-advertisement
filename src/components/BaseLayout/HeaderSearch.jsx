@@ -3,9 +3,10 @@ import Logo from "../UI/Logo";
 import DownImage from "@/assets/icons/down.svg";
 import Search from "../UI/Search";
 import MapPin from "@/assets/icons/map-pin.svg";
-import ProfileImage from "@/assets/images/ProfileImage.svg";
+// import ProfileImage from "@/assets/images/ProfileImage.svg";
 import { useAuthContext } from "@/providers/AuthProvider";
 import { Link } from "react-router-dom";
+import propTypes from "prop-types";
 
 function HeaderSearch({ onClick }) {
   const { logout, CurrentUser, loadingCurrentUser, isLoggedIn } =
@@ -36,7 +37,6 @@ function HeaderSearch({ onClick }) {
               <p className="text-right text-black text-sm tracking-tight">
                 liludori
               </p>
-
               <Button variant="fill" onClick={logout}>
                 خروج از حساب
               </Button>
@@ -71,5 +71,7 @@ function HeaderSearch({ onClick }) {
     </div>
   );
 }
-
+HeaderSearch.propTypes = {
+  onClick: propTypes.func,
+};
 export default HeaderSearch;

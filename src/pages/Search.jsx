@@ -6,7 +6,7 @@ import HeaderSearch from "@/components/BaseLayout/HeaderSearch";
 import ProductBox from "@/components/Product/ProductBox";
 import Footer from "@/components/BaseLayout/Footer";
 import Pagination from "@/components/UI/Pagination";
-import propTypes from "prop-types";
+// import propTypes from "prop-types";
 // import { Link } from "react-router-dom";
 
 import { useEffect, useState } from "react";
@@ -122,21 +122,7 @@ const Search = () => {
         </div>
         <Footer></Footer>
       </div>
-
-      {/* <div className=" h-40 aspect-[2/1] bg-slate-500 grid grid-cols-2 m-10 rounded-xl  overflow-hidden  ">
-        <div className="col-span-1 relative self-stretch ">
-          <img
-            className="object-cover h-full absolute aspect-square  object-center"
-            src={Img1}
-            alt=""
-          />
-        </div>
-        <div className="col-span-1 ">
-          <div>در دست توسعه</div>
-          <div>نمونه کارها</div>
-        </div>
-      </div> */}
-_    </>
+    </>
   );
 };
 
