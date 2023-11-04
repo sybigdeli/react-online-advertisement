@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import propTypes from "prop-types";
-import axios from "axios";
+import { apiGetCurrentUser } from "@/components/api/user";
 
 const authContext = createContext();
 
@@ -33,11 +33,7 @@ const AuthProvider = ({ children }) => {
     try {
       setLoadingCurrentUser(true);
 
-      const result = await axios.get("http://demo2578450.mockable.io/auth/me", {
-        headers: {
-          Authorization: accessToken,
-        },
-      });
+      const result = apiGetCurrentUser();
       setCurrentUser(result.data);
     } catch (error) {
       console.log(error);
