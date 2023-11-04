@@ -6,6 +6,7 @@ import MapPin from "@/assets/icons/map-pin.svg";
 // import ProfileImage from "@/assets/images/ProfileImage.svg";
 import { useAuthContext } from "@/providers/AuthProvider";
 import { Link } from "react-router-dom";
+import propTypes from "prop-types";
 
 function HeaderSearch({ onClick }) {
   const { logout, CurrentUser, loadingCurrentUser, isLoggedIn } =
@@ -70,5 +71,7 @@ function HeaderSearch({ onClick }) {
     </div>
   );
 }
-
+HeaderSearch.propTypes = {
+  onClick: propTypes.func,
+};
 export default HeaderSearch;
