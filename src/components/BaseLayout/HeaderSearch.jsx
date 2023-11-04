@@ -3,7 +3,7 @@ import Logo from "../UI/Logo";
 import DownImage from "@/assets/icons/down.svg";
 import Search from "../UI/Search";
 import MapPin from "@/assets/icons/map-pin.svg";
-import ProfileImage from "@/assets/images/ProfileImage.svg";
+// import ProfileImage from "@/assets/images/ProfileImage.svg";
 import { useAuthContext } from "@/providers/AuthProvider";
 import { Link } from "react-router-dom";
 
@@ -27,7 +27,10 @@ function HeaderSearch({ onClick }) {
               <p className="text-right text-black text-sm tracking-tight">
                 liludori
               </p>
-              <img src={CurrentUser?.avatar} className="w-10 h-10 rounded-full" />
+              <img
+                src={CurrentUser?.avatar}
+                className="w-10 h-10 rounded-full"
+              />
               <Button variant="fill" onClick={logout}>
                 خروج از حساب
               </Button>

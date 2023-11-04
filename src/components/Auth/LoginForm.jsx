@@ -26,6 +26,7 @@ function LoginForm() {
   const { saveAccessToken } = useAuthContext();
   const handleSubmit = async (event) => {
     event.preventDefault();
+    if (loading) return;
     setUnknownError(null);
     const validation = registerSchema.safeParse(loginForm);
 
@@ -58,7 +59,7 @@ function LoginForm() {
 
   return (
     <form
-      onSubmit={(event) => handleSubmit}
+      onSubmit={() => handleSubmit}
       className="w-full max-w-md shadow flex flex-col justify-center items-center gap-6 px-6 py-12"
     >
       <h4 className="text-center text-zinc-800 text-xl font-bold">ورود</h4>
@@ -94,6 +95,11 @@ function LoginForm() {
           ایجاد حساب کاربری
         </Link>
       </div>
+      {unknownError && (
+        <div className="bg-yellow-100 px-4 py-2 rounded text-red-600">
+          {unknownError}
+        </div>
+      )}
     </form>
   );
 }

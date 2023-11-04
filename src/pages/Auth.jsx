@@ -2,6 +2,7 @@ import LoginImageDesktop from "@/assets/images/LoginImage.png";
 import LoginImageMobile from "@/assets/images/LoginImageMobile.png";
 import LoginForm from "@/components/Auth/LoginForm";
 import RegisterForm from "@/components/Auth/RegisterForm";
+import propTypes from "prop-types";
 
 import Logo from "@/components/UI/Logo";
 import { useAuthContext } from "@/providers/AuthProvider";
@@ -34,5 +35,7 @@ const Auth = ({ mode = "sign-in" }) => {
     </div>
   );
 };
-
+Auth.propTypes = {
+  mode: propTypes.bool,
+};
 export default Auth;
