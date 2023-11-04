@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { registerSchema } from "@/components/Auth/schema";
 import { useAuthContext } from "@/providers/AuthProvider";
+import { apiRegisterUser } from "../api/user";
 
 function RegisterForm() {
   const [unknownError, setUnknownError] = useState(null);
@@ -38,10 +39,7 @@ function RegisterForm() {
     try {
       setLoading(true);
 
-      const result = await axios.post(
-        "http://demo2578450.mockable.io/auth/register",
-        data
-      );
+      const result = await apiRegisterUser(data);
       console.log(result);
       saveAccessToken(result.data.token.accessToken);
     } catch (error) {
