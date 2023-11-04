@@ -22,6 +22,9 @@ export default {
           700:"#992bfe",
           800:"#8e14fd",
           900:"#8500ff",
+          1000: "#E6E6E6",
+          1100:"#F5F5F5"
+          
         },
         textColor: {
           100: "#AAAAAA",
