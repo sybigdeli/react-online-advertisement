@@ -5,6 +5,7 @@ import Search from "@/pages/Search";
 import Details from "@/pages/Details";
 import BaseLayout from "@/components/BaseLayout/BaseLayout";
 import Auth from "@/pages/Auth";
+import NewADS from "@/pages/NewADS";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -22,11 +23,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/auth/sign-in",
-    element: <Auth key="sign-in" mode="sign-in"/>,
+    element: <Auth key="sign-in" mode="sign-in" />,
   },
   {
     path: "/auth/sign-up",
-    element: <Auth key="sign-up" mode="sign-up"/>,
+    element: <Auth key="sign-up" mode="sign-up" />,
   },
   {
     path: "/ui",
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
   {
     path: "/Details",
     element: <Details />,
+  },
+  {
+    path: "/newADS",
+    element: <NewADS />,
   },
 ]);
 export default router;

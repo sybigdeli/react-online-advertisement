@@ -26,7 +26,9 @@ function Header() {
             ایران
           </p>
         </div>
-        <Button variant="fill">ایجاد پست</Button>
+        <Button variant="fill">
+          <Link to="/newADS">ثبت آگهی جدید</Link>
+          </Button>
         <Button variant="outline">
           <Link to="/auth">ورود</Link>
         </Button>
