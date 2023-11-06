@@ -18,7 +18,7 @@ const FormLogin = ({
   return (
     <div className="w-full flex flex-col gap-2 border-neutral-200 items-start">
       {label && (
-        <label htmlFor={localId} className="text-slate-500 text-sm font-normal">
+        <label htmlFor={localId} className="text-slate-500 text-xs md:text-sm font-normal">
           {label}
         </label>
       )}
@@ -28,9 +28,9 @@ const FormLogin = ({
           id={localId}
           placeholder={placeHolder}
           value={value}
-          className={`w-full rounded-3xl border p-2 placeholder:text-zinc-200 text-lg font-normal transition focus:outline-primary-500 ${
+          className={`w-full rounded-3xl border p-2 placeholder:text-zinc-300 placeholder:text-sm placeholder:text-center text-lg font-normal transition border-primary-500 focus:outline-primary-700 ${
             error && "border-red-600"
-          }`}
+          } custom-file-button`}
           onChange={onChange}
         />
         {inputType === "password" && (
