@@ -36,6 +36,6 @@ const Auth = ({ mode = "sign-in" }) => {
   );
 };
 Auth.propTypes = {
-  mode: propTypes.bool,
+  mode: propTypes.oneOf(['sign-in', 'sign-up']),
 };
 export default Auth;

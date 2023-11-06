@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { registerSchema } from "@/components/Auth/schema";
 import { useAuthContext } from "@/providers/AuthProvider";
-import { apiRegisterUser } from "../api/user";
+import { apiRegisterUser } from "../../api/user";
 
 function RegisterForm() {
   const [unknownError, setUnknownError] = useState(null);
@@ -40,8 +40,7 @@ function RegisterForm() {
       setLoading(true);
 
       const result = await apiRegisterUser(data);
-      console.log(result);
-      saveAccessToken(result.data.token.accessToken);
+      saveAccessToken(result.token.accessToken);
     } catch (error) {
       console.log(error);
       setUnknownError("خطایی در ثبت نام رخ داده است");

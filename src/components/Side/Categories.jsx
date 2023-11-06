@@ -45,9 +45,11 @@ const Categories = () => {
           key={value.id}
           icon={value.icon}
           title={value.title}
-          subCat={
+          subCats={
             value.sub &&
-            value.sub.map((i) => <SubCat key={value.id} title={i} />)
+            value.sub.map((title, i) => (
+              <SubCat key={`sub-cat-${i}`} title={title} />
+            ))
           }
         />
       ))}

@@ -14,6 +14,10 @@ const router = createBrowserRouter([
         index: true,
         element: <HomePage />,
       },
+      {
+        path: "/search",
+        element: <Search />,
+      },
     ],
   },
   {
@@ -22,19 +26,15 @@ const router = createBrowserRouter([
   },
   {
     path: "/auth/sign-in",
-    element: <Auth key="sign-in" mode="sign-in"/>,
+    element: <Auth key="sign-in" mode="sign-in" />,
   },
   {
     path: "/auth/sign-up",
-    element: <Auth key="sign-up" mode="sign-up"/>,
+    element: <Auth key="sign-up" mode="sign-up" />,
   },
   {
     path: "/ui",
     element: <Ui />,
-  },
-  {
-    path: "/Search",
-    element: <Search />,
   },
   {
     path: "/Details",

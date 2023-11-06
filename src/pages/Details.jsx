@@ -1,5 +1,5 @@
 import Footer from "@/components/BaseLayout/Footer";
-import HeaderSearch from "@/components/BaseLayout/HeaderSearch";
+import HeaderSearch from "@/components/BaseLayout/Header";
 import React, { useState } from "react";
 import rightIcon from "@/assets/icons/right.svg";
 import leftIcon from "@/assets/icons/left.svg";
