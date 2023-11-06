@@ -172,7 +172,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="grid grid-cols-1 xl:flex gap-y-10 xl:gap-10 justify-center items-center py-5 px-5 md:px-20 mx-auto my-0">
+      <section className="grid grid-cols-1 xl:flex gap-y-10 xl:gap-10 justify-center py-5 px-5 md:px-20 mx-auto my-0">
         <div className="grid col-span-1 xl:flex xl:flex-grow xl:flex-col gap-10 my-0 mx-auto">
           <p className="text-center text-neutral-600 font-bold text-2xl leading-tight tracking-tight">
             تقویم
