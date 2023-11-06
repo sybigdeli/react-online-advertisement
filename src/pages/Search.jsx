@@ -6,20 +6,25 @@ import Pagination from "@/components/UI/Pagination";
 import { useEffect, useState } from "react";
 import Side from "@/components/Side/Side";
 import { apiSearchPost } from "@/api/search";
+import { useSearchParams } from "react-router-dom";
+import Button from "@/components/UI/Button";
 
 const Search = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [searchData, setSearchData] = useState([]);
+  const [searchParams] = useSearchParams();
+
   const [click, SetClick] = useState(false);
 
   const handleClick = () => {
     SetClick(true);
   };
+  const q = searchParams.get("q");
 
   const getSearchData = async () => {
     try {
       setIsLoading(true);
-      const data = await apiSearchPost();
+      const data = await apiSearchPost({ q });
 
       setSearchData(data);
     } catch (error) {
@@ -31,7 +36,7 @@ const Search = () => {
 
   useEffect(() => {
     getSearchData();
-  }, []);
+  }, [q]);
 
   useEffect(() => {
     const handleClick = (event) => {
@@ -71,6 +76,8 @@ const Search = () => {
             <div className="grid grid-cols-2 sm:gap-16 md:grid-cols-3 md:gap-4 lg:grid-cols-3 lg:gap-1 xl:grid-cols-4 xl:gap-2">
               {isLoading
                 ? "در حال دریافت اطلاعات ..."
+                : searchData.length === 0
+                ? "چیزی یافت نشد."
                 : searchData.map((product) => (
                     <ProductBox
                       key={product.id}

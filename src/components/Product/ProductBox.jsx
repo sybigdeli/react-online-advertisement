@@ -65,7 +65,7 @@ const ProductBox = ({ children, image_list, price, title, location }) => {
 ProductBox.propTypes = {
   children: propTypes.node,
   image_list: propTypes.arrayOf(propTypes.string),
-  price: propTypes.string,
+  price: propTypes.number,
   title: propTypes.string,
   location: propTypes.string,
 };
