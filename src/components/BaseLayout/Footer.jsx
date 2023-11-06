@@ -28,7 +28,7 @@ const Footer = () => {
         "Abuse & Legal",
         "Privacy Policy",
         "Site Map",
-        "Site Map",
+
       ],
     },
   ];
@@ -53,7 +53,7 @@ const Footer = () => {
           <h3 className="text-lg text-textColor-600">{footerData[1].title}</h3>
           <ul className="grid grid-cols-3 grid-rows-3 gap-4 ">
             {footerData[1].rows.map((row, index) => (
-              <li key={index}>
+              <li key={index} className="whitespace-nowrap">
                 <a href=""> {row}</a>{" "}
               </li>
             ))}
