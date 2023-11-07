@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import propTypes from "prop-types";
-import { apiGetCurrentUser } from "@/components/api/user";
+import { apiGetCurrentUser } from "@/api/user";
 
 const authContext = createContext();
 
@@ -33,8 +33,8 @@ const AuthProvider = ({ children }) => {
     try {
       setLoadingCurrentUser(true);
 
-      const result = apiGetCurrentUser();
-      setCurrentUser(result.data);
+      const result = await apiGetCurrentUser();
+      setCurrentUser(result);
     } catch (error) {
       console.log(error);
     } finally {

@@ -15,6 +15,10 @@ const router = createBrowserRouter([
         index: true,
         element: <HomePage />,
       },
+      {
+        path: "/search",
+        element: <Search />,
+      },
     ],
   },
   {
@@ -32,10 +36,6 @@ const router = createBrowserRouter([
   {
     path: "/ui",
     element: <Ui />,
-  },
-  {
-    path: "/Search",
-    element: <Search />,
   },
   {
     path: "/Details",

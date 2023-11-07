@@ -1,5 +1,5 @@
 import propTypes from "prop-types";
-function SideItem({ title, icon, selected, onClick, subCat }) {
+function SideItem({ title, icon, selected, onClick, subCats }) {
   return (
     <div>
       <div
@@ -7,11 +7,11 @@ function SideItem({ title, icon, selected, onClick, subCat }) {
         className="flex justify-start font-normal text-textColor-200 gap-4 p-2 w-full"
       >
         <img src={icon} className="w-5" alt="" />
-        <span className={`${subCat ? "font-bold" : "font-normal"} `}>
+        <span className={`${subCats ? "font-bold" : "font-normal"} `}>
           {title}
         </span>
       </div>
-      {subCat}
+      {subCats}
     </div>
   );
 }
@@ -19,6 +19,6 @@ SideItem.propTypes = {
   title : propTypes.string,
   icon : propTypes.string,
   onClick : propTypes.func,
-  subCat : propTypes.string,
+  subCats : propTypes.arrayOf(propTypes.node),
 }
 export default SideItem;

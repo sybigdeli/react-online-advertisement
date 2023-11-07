@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 
 import "./Product.css";
 import { useState } from "react";
-const ProductBox = ({ children, img, price, title, location }) => {
+const ProductBox = ({ children, image_list, price, title, location }) => {
   const [handleLiked, SetHandleLiked] = useState(false);
 
   return (
@@ -34,10 +34,10 @@ const ProductBox = ({ children, img, price, title, location }) => {
         // onSlideChange={() => console.log("slide change")}
         // onSwiper={(swiper) => console.log(swiper)}
       >
-        {img.map((i) => {
+        {image_list.map((image, i) => {
           return (
-            <SwiperSlide key={i.length}>
-              <img src={i} alt="" className="w-full" />
+            <SwiperSlide key={i}>
+              <img src={image} alt="" className="w-full" />
             </SwiperSlide>
           );
         })}
@@ -64,8 +64,8 @@ const ProductBox = ({ children, img, price, title, location }) => {
 
 ProductBox.propTypes = {
   children: propTypes.node,
-  img: propTypes.string,
-  price: propTypes.string,
+  image_list: propTypes.arrayOf(propTypes.string),
+  price: propTypes.number,
   title: propTypes.string,
   location: propTypes.string,
 };

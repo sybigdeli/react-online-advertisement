@@ -15,6 +15,10 @@ const createRequest = (baseURL) => {
     return config;
   });
 
+  instance.interceptors.response.use(function (response) {
+    return response.data;
+  });
+
   return instance;
 };
 

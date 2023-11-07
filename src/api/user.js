@@ -1,7 +1,7 @@
 import { apiClient } from "./request";
 
 const apiGetCurrentUser = (data) => {
-  return apiClient.post("auth/me", data);
+  return apiClient.get("auth/me", data);
 };
 
 const apiLoginUser = () => {
@@ -9,7 +9,7 @@ const apiLoginUser = () => {
 };
 
 const apiRegisterUser = (data) => {
-  return apiClient.get("auth/register", data);
+  return apiClient.post("auth/register", data);
 };
 
 const apiAddNewAds = (data) => {
