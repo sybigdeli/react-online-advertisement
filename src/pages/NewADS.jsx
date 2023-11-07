@@ -1,37 +1,46 @@
 import LandingImage from "@/assets/images/Landing.png";
 import map from "@/assets/images/map.png";
 import Select from "@/components/UI/Select";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { apiAddNewAds } from "@/components/api/user";
 import FormLogin from "@/components/UI/FormLogin";
 import Button from "@/components/UI/Button";
 
 function NewADS() {
   const [isSelectGrouping, setIsSelectGrouping] = useState(false);
+  const newAddData = useRef({
+    Services: null,
+    Country: null,
+    City: null,
+    NameAds: null,
+    PriceAds: null,
+    DescriptionAds: null,
+    images: [],
+  });
 
-  const handleSelectGroupingAds = (e) => {
+  const handleSelectGroupingAds = () => {
     setIsSelectGrouping(true);
+    console.log(newAddData.current);
+  };
 
-    // if (e.target.value === "خدمات") {
-    //   selectedGroupingAds.current.Services =
-    //     !selectedGroupingAds.current.Services;
-    // } else if (e.target.value === "شغل ها") {
-    //   selectedGroupingAds.current.Jobs = !selectedGroupingAds.current.Jobs;
-    // } else if (e.target.value === "مسکن") {
-    //   selectedGroupingAds.current.Housing =
-    //     !selectedGroupingAds.current.Housing;
-    // } else if (e.target.value === "برای فروش") {
-    //   selectedGroupingAds.current.ForSale =
-    //     !selectedGroupingAds.current.ForSale;
-    // } else if (e.target.value === "انجمن") {
-    //   selectedGroupingAds.current.Community =
-    //     !selectedGroupingAds.current.Community;
-    // }
-    // console.log(selectedGroupingAds.current);
+  const handleNewAdsData = async (e) => {
+    e.preventDefault();
+    try {
+      const result = await apiAddNewAds(newAddData.current);
+      console.log(result);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      console.log("آگهی شما با موفقیت به اشتراک گذاشته شد !");
+    }
   };
   return (
     <div className="flex flex-col-reverse justify-center h-screen overflow-scroll md:overflow-hidden gap-8 md:flex-row md:justify-center md:items-center md:p-8">
       <div className="basis-1/2  rounded-lg flex flex-col flex-grow justify-center items-center gap-8 px-4 py-4 overflow-scroll md:overflow-hidden">
-        <form className="flex flex-col justify-center items-center gap-5 overflow-scroll  md:overflow-hidden px-4">
+        <form
+          onSubmit={handleNewAdsData}
+          className="flex flex-col justify-center items-center gap-5 overflow-scroll  md:overflow-hidden px-4"
+        >
           <div className="flex items-center justify-center gap-4">
             <Select
               selectId="Grouping"
@@ -49,6 +58,9 @@ function NewADS() {
                   label="کشور خود را انتخاب کنید :"
                   disabledOptions="مشاهده کشور ها"
                   optionsArray={["ایران", "ترکیه", "عربستان", "ایتالیا"]}
+                  onChange={(e) =>
+                    (newAddData.current.Country = e.target.value)
+                  }
                 />
 
                 <Select
@@ -56,6 +68,7 @@ function NewADS() {
                   label="شهر خود را انتخاب کنید :"
                   disabledOptions="مشاهده شهر ها"
                   optionsArray={["قم", "تبریز", "تهران", "اراک", "مشهد"]}
+                  onChange={(e) => (newAddData.current.City = e.target.value)}
                 />
               </div>
 
@@ -64,13 +77,19 @@ function NewADS() {
                   inputName="ads-name"
                   label="نامی برای محصول خود انتخاب کنید :"
                   placeHolder="نام کالای خود را انتخاب کنید"
-                  value=""
+                  value={newAddData.current.NameAds}
+                  onChange={(e) =>
+                    (newAddData.current.NameAds = e.target.value)
+                  }
                 />
                 <FormLogin
                   inputName="ads-price"
                   label="قیمتی برای محصول خود انتخاب کنید :"
                   placeHolder="قیمت کالای خود را انتخاب کنید"
-                  value=""
+                  value={newAddData.current.PriceAds}
+                  onChange={(e) =>
+                    (newAddData.current.PriceAds = e.target.value)
+                  }
                 />
               </div>
 
@@ -81,7 +100,10 @@ function NewADS() {
                   name="description"
                   id="description"
                   placeholder="در باره کالای خود توضیحات بیشتری با دیگران به اشتراک بگذارید"
-                  value=""
+                  value={newAddData.current.DescriptionAds}
+                  onChange={(e) =>
+                    (newAddData.current.DescriptionAds = e.target.value)
+                  }
                 ></textarea>
               </div>
 
@@ -91,13 +113,17 @@ function NewADS() {
                   inputType="file"
                   label="تصاویر محصول خود را انتخاب کنید :"
                   placeHolder="انتخاب تصاویر :"
-                  value=""
+                  onChange={(e) => (newAddData.current.images = e.target.value)}
                 />
               </div>
               <div className="relative flex w-72 h-52 overflow-hidden">
                 <img src={map} className="w-full absolute rounded-2xl" />
               </div>
-              <Button type="submit" variant="fill">
+              <Button
+                type="submit"
+                variant="fill"
+                onClick={handleSelectGroupingAds}
+              >
                 ثبت آگهی
               </Button>
             </>

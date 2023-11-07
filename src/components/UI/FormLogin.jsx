@@ -10,7 +10,7 @@ const FormLogin = ({
   placeHolder,
   onChange,
   error,
-  value,
+  value = "",
 }) => {
   const _id = useId();
   const localId = inputName || _id;
