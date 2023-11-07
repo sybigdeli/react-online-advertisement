@@ -17,7 +17,7 @@ const Button = ({
     <button
       type={type}
       disabled={loading}
-      className={`w-full ${variants[variant]} disabled:opacity-50`}
+      className={`w-full ${variants[variant]} disabled:opacity-50 whitespace-nowrap`}
       {...props}
     >
       {loading ? "Loading..." : children}

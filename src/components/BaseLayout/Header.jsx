@@ -42,9 +42,10 @@ function Header() {
             </Button>
           )}
         </div>
-        <div className="hidden">
-          <Button variant="fill">Create a Post</Button>
-        </div>
+
+        <Link to="/newADS">
+          <Button variant="fill">ثبت آگهی جدید</Button>
+        </Link>
       </div>
       <div className="hidden lg:flex flex-row items-center justify-end flex-grow gap-[20px]">
         <div className="flex-grow">
@@ -61,6 +62,7 @@ function Header() {
             className="opacity-50 flex-col justify-start items-start"
           />
         </div>
+
         <Link to="/">
           <Logo />
         </Link>

@@ -5,6 +5,7 @@ import Search from "@/pages/Search";
 import Details from "@/pages/Details";
 import BaseLayout from "@/components/BaseLayout/BaseLayout";
 import Auth from "@/pages/Auth";
+import NewADS from "@/pages/NewADS";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
   {
     path: "/Details",
     element: <Details />,
+  },
+  {
+    path: "/newADS",
+    element: <NewADS />,
   },
 ]);
 export default router;
