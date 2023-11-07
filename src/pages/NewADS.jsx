@@ -2,7 +2,7 @@ import LandingImage from "@/assets/images/Landing.png";
 import map from "@/assets/images/map.png";
 import Select from "@/components/UI/Select";
 import { useRef, useState } from "react";
-import { apiAddNewAds } from "@/components/api/user";
+import { apiAddNewAds } from "@/api/user";
 import FormLogin from "@/components/UI/FormLogin";
 import Button from "@/components/UI/Button";
 
