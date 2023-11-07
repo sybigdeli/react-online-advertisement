@@ -12,4 +12,8 @@ const apiRegisterUser = (data) => {
   return apiClient.get("auth/register", data);
 };
 
-export { apiGetCurrentUser, apiLoginUser, apiRegisterUser };
+const apiAddNewAds = (data) => {
+  return apiClient.post("ads/newads" , data);
+}
+
+export { apiGetCurrentUser, apiLoginUser, apiRegisterUser , apiAddNewAds};
