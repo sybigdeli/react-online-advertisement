@@ -2,7 +2,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import propTypes from "prop-types";
 
-
 import Like from "../../assets/icons/Like.svg";
 import Liked from "../../assets/icons/Liked.svg";
 import "swiper/css";
@@ -15,7 +14,7 @@ const ProductBox = ({ children, image_list, price, title, location }) => {
 
   return (
     <div
-      className="product-box max-w-[280px] rounded-2xl overflow-hidden m-3 shadow-lg
+      className="product-box  rounded-2xl  m-3 shadow-lg
     "
     >
       <Swiper
@@ -37,24 +36,30 @@ const ProductBox = ({ children, image_list, price, title, location }) => {
         {image_list.map((image, i) => {
           return (
             <SwiperSlide key={i}>
-              <img src={image} alt="" className="w-full" />
+              <img
+                src={image}
+                alt=""
+                className="relative w-full aspect-video self-stretch rounded-2xl  object-cover"
+              />
             </SwiperSlide>
           );
         })}
       </Swiper>
-      <div className="product-box__footer px-3 py-2 gap-28">
+      <div className="product-box__footer  h-36   px-5 py-3 flex flex-col justify-between ">
         <div className="product-box__footer__top flex justify-between font-bold text-textColor-900">
-          <span>{price}</span>
+          <span className="text-sky-600">{price}</span>
           <img
             src={handleLiked ? Liked : Like}
             className="opacity-50"
-            onMouseEnter={() => {
+            onClick={() => {
               SetHandleLiked(!handleLiked);
             }}
           />
         </div>
-        <p className="product-box__footer__mid text-textColor-200">{title}</p>
-        <span className="product-box__footer__down text-textColor-100">
+        <p className="product-box__footer__mid  text-textColor-200  truncate ">
+          {title} ...
+        </p>
+        <span className="product-box__footer__down text-textColor-100 flex">
           {location}
         </span>
       </div>

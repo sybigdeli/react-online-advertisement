@@ -8,6 +8,7 @@ import Side from "@/components/Side/Side";
 import { apiSearchPost } from "@/api/search";
 import { useSearchParams } from "react-router-dom";
 import Button from "@/components/UI/Button";
+import LoadingBox from "@/components/UI/LoadingBox";
 
 const Search = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -19,6 +20,7 @@ const Search = () => {
   const handleClick = () => {
     SetClick(true);
   };
+
   const q = searchParams.get("q");
 
   const getSearchData = async () => {
@@ -73,20 +75,27 @@ const Search = () => {
               در دست توسعه
             </div>
 
-            <div className="grid grid-cols-2 sm:gap-16 md:grid-cols-3 md:gap-4 lg:grid-cols-3 lg:gap-1 xl:grid-cols-4 xl:gap-2">
-              {isLoading
-                ? "در حال دریافت اطلاعات ..."
-                : searchData.length === 0
-                ? "چیزی یافت نشد."
-                : searchData.map((product) => (
-                    <ProductBox
-                      key={product.id}
-                      price={product.price}
-                      title={product.title}
-                      image_list={product.images}
-                      location={product.location}
-                    />
-                  ))}
+            <div className="grid grid-cols-2 sm:gap-16 md:grid-cols-3 md:gap-4 lg:grid-cols-3 lg:gap-1 xl:grid-cols-3 xl:gap-2">
+              {isLoading ? (
+                <>
+                  <LoadingBox />
+                  <LoadingBox />
+                  <LoadingBox />
+                  <LoadingBox />
+                </>
+              ) : searchData.length === 0 ? (
+                "چیزی یافت نشد."
+              ) : (
+                searchData.map((product) => (
+                  <ProductBox
+                    key={product.id}
+                    price={product.price}
+                    title={product.title}
+                    image_list={product.images}
+                    location={product.location}
+                  />
+                ))
+              )}
             </div>
 
             <Pagination />
