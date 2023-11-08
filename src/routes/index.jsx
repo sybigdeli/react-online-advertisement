@@ -6,6 +6,7 @@ import Details from "@/pages/Details";
 import BaseLayout from "@/components/BaseLayout/BaseLayout";
 import Auth from "@/pages/Auth";
 import NewADS from "@/pages/NewADS";
+import Page404 from "@/pages/404";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
   {
     path: "/newADS",
     element: <NewADS />,
+  },
+  {
+    path: "/*",
+    element: <Page404 />,
   },
 ]);
 export default router;
