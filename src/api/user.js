@@ -13,7 +13,7 @@ const apiRegisterUser = (data) => {
 };
 
 const apiAddNewAds = (data) => {
-  return apiClient.post("ads/newads" , data);
+  return apiClient.post("ads/me" , data);
 }
 
 export { apiGetCurrentUser, apiLoginUser, apiRegisterUser , apiAddNewAds};
