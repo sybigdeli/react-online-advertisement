@@ -28,7 +28,6 @@ const Footer = () => {
         "Abuse & Legal",
         "Privacy Policy",
         "Site Map",
-
       ],
     },
   ];
@@ -38,10 +37,10 @@ const Footer = () => {
       dir="ltr"
       className="px-5 md:px-20 gap-6 md:gap-3 bg-primary-1100  pt-10"
     >
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div className="grid gap-6">
-          <h3 className="text-lg text-textColor-600">{footerData[0].title}</h3>
-          <ul className="grid grid-cols-2 grid-rows-3 gap-4 text-lg text-textColor-200">
+      <div className="grid sm:grid-cols-1 justify-center md:grid-cols-2justify-center lg:grid-cols-3 gap-6">
+        <div className=" gap-6">
+          <h3 className="text-lg text-textColor-600 py-3  ">{footerData[0].title}</h3>
+          <ul className="grid grid-cols-2  gap-4 text-lg text-textColor-200">
             {footerData[0].rows.map((row, index) => (
               <li key={index} className="">
                 <Link>{row}</Link>
@@ -49,11 +48,11 @@ const Footer = () => {
             ))}
           </ul>
         </div>
-        <div className="grid gap-6">
-          <h3 className="text-lg text-textColor-600">{footerData[1].title}</h3>
-          <ul className="grid grid-cols-3 grid-rows-3 gap-4 ">
+        <div className=" gap-6">
+          <h3 className="text-lg text-textColor-600 py-3">{footerData[1].title}</h3>
+          <ul className="grid grid-cols-3  gap-4 ">
             {footerData[1].rows.map((row, index) => (
-              <li key={index} className="whitespace-nowrap">
+              <li key={index} className="">
                 <a href=""> {row}</a>{" "}
               </li>
             ))}
@@ -73,7 +72,8 @@ const Footer = () => {
       <div className="">
         <div className="h-1 w-full bg-primary-1000 mt-20"></div>
         <div className=" flex font-semibold  justify-center my-5">
-        © 2021 Craigslist        </div>
+          © 2021 Craigslist{" "}
+        </div>
       </div>
     </footer>
   );
