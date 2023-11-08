@@ -18,8 +18,9 @@ function NewADS() {
     images: [],
   });
 
-  const handleSelectGroupingAds = () => {
+  const handleSelectGroupingAds = (e) => {
     setIsSelectGrouping(true);
+    newAddData.current.Services = e.target.value;
     console.log(newAddData.current);
   };
 
