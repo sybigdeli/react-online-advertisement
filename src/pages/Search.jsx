@@ -67,18 +67,21 @@ const Search = () => {
 
       <div>
         <div className="grid grid-cols-5 gap-8">
-          <div className="col-span-1 border-l-[1px] hidden lg:flex">
+          <div
+            className={`col-span-1 border-l-[1px] hidden lg:flex ${
+              searchData.length === 0 ? "h-screen" : ""
+            }`}
+          >
             <Side />
           </div>
           <div className="search-content-left grid  col-span-5 lg:col-span-4 ">
-            <div className="result-section bg-slate-100 w-full h-[100px] rounded-lg text-[20px] flex justify-center items-center">
+            {/* <div className="result-section bg-slate-100 w-full h-[100px] rounded-lg text-[20px] flex justify-center items-center">
               در دست توسعه
-            </div>
+            </div> */}
 
             <div className="grid grid-cols-2 sm:gap-16 md:grid-cols-3 md:gap-4 lg:grid-cols-3 lg:gap-1 xl:grid-cols-3 xl:gap-2">
               {isLoading ? (
                 <>
-                  <LoadingBox />
                   <LoadingBox />
                   <LoadingBox />
                   <LoadingBox />
