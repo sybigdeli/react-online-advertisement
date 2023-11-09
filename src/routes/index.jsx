@@ -5,7 +5,7 @@ import Search from "@/pages/Search";
 import Details from "@/pages/Details";
 import BaseLayout from "@/components/BaseLayout/BaseLayout";
 import Auth from "@/pages/Auth";
-import NewADS from "@/pages/NewADS";
+import NewPost from "@/pages/NewPost";
 import Page404 from "@/pages/404";
 const router = createBrowserRouter([
   {
@@ -43,8 +43,8 @@ const router = createBrowserRouter([
     element: <Details />,
   },
   {
-    path: "/newADS",
-    element: <NewADS />,
+    path: "/posts/new",
+    element: <NewPost />,
   },
   {
     path: "/*",
