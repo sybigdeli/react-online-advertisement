@@ -4,7 +4,7 @@ import propTypes from "prop-types";
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
-function Search({ children, varient }) {
+function Search({ children }) {
   const [searchParams, setSearchParams] = useSearchParams();
   const [query, setQuery] = useState(() => searchParams.get("q"));
 
@@ -40,6 +40,5 @@ function Search({ children, varient }) {
 }
 Search.propTypes = {
   children: propTypes.node,
-  varient: propTypes.string,
 };
 export default Search;

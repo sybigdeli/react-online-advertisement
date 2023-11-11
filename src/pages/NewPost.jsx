@@ -6,40 +6,40 @@ import { apiAddNewAds } from "@/api/user";
 import FormLogin from "@/components/UI/FormLogin";
 import Button from "@/components/UI/Button";
 
-function NewADS() {
+function NewPost() {
   const [isSelectGrouping, setIsSelectGrouping] = useState(false);
   const newAddData = useRef({
-    Services: null,
-    Country: null,
-    City: null,
-    NameAds: null,
-    PriceAds: null,
-    DescriptionAds: null,
+    Services: undefined,
+    Country: undefined,
+    City: undefined,
+    NamePost: undefined,
+    PricePost: undefined,
+    DescriptionPost: undefined,
     images: [],
   });
 
-  const handleSelectGroupingAds = (e) => {
+  const handleSelectGroupingPost = (e) => {
     setIsSelectGrouping(true);
     newAddData.current.Services = e.target.value;
     console.log(newAddData.current);
   };
 
-  const handleNewAdsData = async (e) => {
+  const handleNewPostData = async (e) => {
     e.preventDefault();
-    try {
-      const result = await apiAddNewAds(newAddData.current);
-      console.log(result);
-    } catch (error) {
-      console.log(error);
-    } finally {
-      console.log("آگهی شما با موفقیت به اشتراک گذاشته شد !");
-    }
+    // try {
+    //   const result = await apiAddNewPost(newAddData.current);
+    //   console.log(result);
+    // } catch (error) {
+    //   console.log(error);
+    // } finally {
+    //   console.log("آگهی شما با موفقیت به اشتراک گذاشته شد !");
+    // }
   };
   return (
     <div className="flex flex-col-reverse justify-center h-screen overflow-scroll md:overflow-hidden gap-8 md:flex-row md:justify-center md:items-center md:p-8">
       <div className="basis-1/2  rounded-lg flex flex-col flex-grow justify-center items-center gap-8 px-4 py-4 overflow-scroll md:overflow-hidden">
         <form
-          onSubmit={handleNewAdsData}
+          onSubmit={handleNewPostData}
           className="flex flex-col justify-center items-center gap-5 overflow-scroll  md:overflow-hidden px-4"
         >
           <div className="flex items-center justify-center gap-4">
@@ -48,7 +48,7 @@ function NewADS() {
               label="دسته آگهی خود را انتخاب کنید :"
               disabledOptions="دسته بندی آگهی ها"
               optionsArray={["خدمات", "شغل ها", "مسکن", "برای فروش", "انجمن"]}
-              onChange={(e) => handleSelectGroupingAds(e)}
+              onChange={(e) => handleSelectGroupingPost(e)}
             />
           </div>
           {isSelectGrouping && (
@@ -75,21 +75,21 @@ function NewADS() {
 
               <div className="flex items-center justify-center gap-4">
                 <FormLogin
-                  inputName="ads-name"
+                  inputName="Post-name"
                   label="نامی برای محصول خود انتخاب کنید :"
                   placeHolder="نام کالای خود را انتخاب کنید"
-                  value={newAddData.current.NameAds}
+                  value={newAddData.current.NamePost}
                   onChange={(e) =>
-                    (newAddData.current.NameAds = e.target.value)
+                    (newAddData.current.NamePost = e.target.value)
                   }
                 />
                 <FormLogin
-                  inputName="ads-price"
+                  inputName="Post-price"
                   label="قیمتی برای محصول خود انتخاب کنید :"
                   placeHolder="قیمت کالای خود را انتخاب کنید"
-                  value={newAddData.current.PriceAds}
+                  value={newAddData.current.PricePost}
                   onChange={(e) =>
-                    (newAddData.current.PriceAds = e.target.value)
+                    (newAddData.current.PricePost = e.target.value)
                   }
                 />
               </div>
@@ -101,9 +101,9 @@ function NewADS() {
                   name="description"
                   id="description"
                   placeholder="در باره کالای خود توضیحات بیشتری با دیگران به اشتراک بگذارید"
-                  value={newAddData.current.DescriptionAds}
+                  value={newAddData.current.DescriptionPost}
                   onChange={(e) =>
-                    (newAddData.current.DescriptionAds = e.target.value)
+                    (newAddData.current.DescriptionPost = e.target.value)
                   }
                 ></textarea>
               </div>
@@ -123,7 +123,7 @@ function NewADS() {
               <Button
                 type="submit"
                 variant="fill"
-                onClick={handleSelectGroupingAds}
+                onClick={handleSelectGroupingPost}
               >
                 ثبت آگهی
               </Button>
@@ -145,4 +145,4 @@ function NewADS() {
   );
 }
 
-export default NewADS;
+export default NewPost;
