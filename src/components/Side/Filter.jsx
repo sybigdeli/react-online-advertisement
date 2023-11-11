@@ -31,31 +31,8 @@ function Filter() {
         />
       </Stack>
       <Stack direction="row">
-        <Input
-          value={value[1]}
-          onChange={(e) => handleInputChange(1, e)}
-          InputProps={{
-            inputProps: {
-              min: 0,
-              max: 100,
-              type: "number",
-            },
-            disableUnderline: true,
-          }}
-        />
-        <Input
-          justifyContent="center"
-          value={value[0]}
-          onChange={(e) => handleInputChange(0, e)}
-          InputProps={{
-            inputProps: {
-              min: 0,
-              max: 100,
-              type: "number",
-            },
-            disableUnderline: true,
-          }}
-        />
+        <Input value={value[1]} onChange={(e) => handleInputChange(1, e)} />
+        <Input value={value[0]} onChange={(e) => handleInputChange(0, e)} />
       </Stack>
     </Box>
   );

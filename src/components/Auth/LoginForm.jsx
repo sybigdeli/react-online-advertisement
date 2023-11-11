@@ -1,5 +1,5 @@
 import Button from "@/components/UI/Button";
-import FormLogin from "@/components/UI/FormLogin";
+import FormLogin from "@/components/UI/Input";
 import { z } from "zod";
 import { useState } from "react";
 import { Link } from "react-router-dom";
