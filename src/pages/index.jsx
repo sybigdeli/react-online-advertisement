@@ -140,7 +140,7 @@ const forumContent = [
 const HomePage = () => {
   return (
     <div>
-      <section className="w-full px-10 py-20 grid grid-rows-2 gap-y-10 bg-black bg-opacity-60 bg-header-image bg-cover bg-no-repeat">
+      <section className="w-full px-10 py-20 grid lg:grid-rows-1 grid-rows-2 gap-y-10 bg-black bg-opacity-60 bg-header-image bg-cover bg-no-repeat">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 text-center  md:text-right mx-auto my-0">
           <h4 className="text-white text-3xl sm:text-5xl font-normal">
             بزرگترین وب سایت
@@ -149,7 +149,7 @@ const HomePage = () => {
             آگهی های تبلیغاتی
           </h4>
         </div>
-        <div className="max-w-sm grid mx-auto my-0">
+        <div className="lg:hidden max-w-sm grid mx-auto my-0">
           <Search>
             <City city="Austin" country="TX USA" />
           </Search>

@@ -5,6 +5,7 @@ const Button = ({
   variant,
   loading = false,
   disabled = false,
+  className,
   ...props
 }) => {
   const variants = {
@@ -17,7 +18,7 @@ const Button = ({
     <button
       type={type}
       disabled={loading}
-      className={`w-full ${variants[variant]} disabled:opacity-50 whitespace-nowrap`}
+      className={`w-full ${variants[variant]} disabled:opacity-50 whitespace-nowrap ${className}`}
       {...props}
     >
       {loading ? "Loading..." : children}
@@ -30,5 +31,6 @@ Button.propTypes = {
   variant: propTypes.oneOf(["fill", "outline"]),
   loading: propTypes.bool,
   disabled: propTypes.bool,
+  className: propTypes.string,
 };
 export default Button;
