@@ -13,7 +13,12 @@ function BasicAccordion() {
         "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با ",
     },
     {
-      title: "sss",
+      title: "دریا",
+      description:
+        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با ",
+    },
+    {
+      title: "زمین",
       description:
         "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با ",
     },
@@ -35,12 +40,20 @@ function BasicAccordion() {
             id="panel1a-header"
             sx={{ borderBottom: "1px solid #E6E6E6" }}
           >
-            <Typography sx={{ fontFamily: "Estedad" }}>
+            <Typography
+              sx={{
+                fontFamily: "Estedad",
+                fontSize: "15px",
+                fontWeight: "700",
+              }}
+            >
               {value.title}
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography sx={{ fontFamily: "Estedad" }}>
+            <Typography
+              sx={{ fontFamily: "Estedad", fontSize: "15px", color: "#333" }}
+            >
               {value.description}
             </Typography>
           </AccordionDetails>

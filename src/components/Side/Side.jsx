@@ -4,7 +4,7 @@ import Filter from "./Filter";
 
 const Side = () => {
   return (
-    <div className=" h-full w-full px-4  flex flex-col gap-4">
+    <div className=" h-full w-full px-4 flex flex-col gap-4">
       <div>
         <Categories />
       </div>
