@@ -9,15 +9,16 @@ const Select = ({
 }) => {
   return (
     <div className="flex flex-col justify-center items-center gap-2">
-      <label for={selectId}>{label}</label>
+      <label htmlFor={selectId}>{label}</label>
 
       <select
         name={selectId}
         id={selectId}
         className="border border-primary-600 rounded-xl px-2 py-1 cursor-pointer transition focus:outline-primary-600"
+        defaultValue={disabledOptions}
         {...props}
       >
-        <option defaultValue={disabledOptions} value={disabledOptions} disabled selected>
+        <option  value={disabledOptions} disabled>
           {disabledOptions}
         </option>
         {optionsArray.map((option , index) => (

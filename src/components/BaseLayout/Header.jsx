@@ -43,7 +43,7 @@ function Header() {
           )}
         </div>
 
-        <Link to="/newADS">
+        <Link to="/posts/new">
           <Button variant="fill">ثبت آگهی جدید</Button>
         </Link>
       </div>
