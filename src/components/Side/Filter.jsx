@@ -6,7 +6,7 @@ import Input from "@mui/material/Input";
 import { useState } from "react";
 
 function Filter() {
-  const [value, setValue] = useState([0, 100]);
+  const [value, setValue] = useState([0, 69000000]);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -26,8 +26,11 @@ function Filter() {
           value={value}
           onChange={handleChange}
           min={0}
-          max={100}
-          step={1}
+          max={69000000}
+          step={10000}
+          valueLabelDisplay="auto"
+          aria-labelledby="range-slider"
+          getAriaValueText={(value) => `${value}`}
         />
       </Stack>
       <Stack direction="row">
