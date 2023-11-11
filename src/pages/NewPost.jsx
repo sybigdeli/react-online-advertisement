@@ -2,12 +2,19 @@ import LandingImage from "@/assets/images/Landing.png";
 import map from "@/assets/images/map.png";
 import Select from "@/components/UI/Select";
 import { useRef, useState } from "react";
+
+import Backdrop from "@mui/material/Backdrop";
 import { apiAddNewAds } from "@/api/user";
-import FormLogin from "@/components/UI/FormLogin";
+import CircularProgress from "@mui/material/CircularProgress";
+import FormLogin from "@/components/UI/Input";
 import Button from "@/components/UI/Button";
+import { useNavigate } from "react-router-dom";
 
 function NewPost() {
   const [isSelectGrouping, setIsSelectGrouping] = useState(false);
+  const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+
   const newAddData = useRef({
     Services: undefined,
     Country: undefined,
@@ -26,14 +33,16 @@ function NewPost() {
 
   const handleNewPostData = async (e) => {
     e.preventDefault();
-    // try {
-    //   const result = await apiAddNewPost(newAddData.current);
-    //   console.log(result);
-    // } catch (error) {
-    //   console.log(error);
-    // } finally {
-    //   console.log("آگهی شما با موفقیت به اشتراک گذاشته شد !");
-    // }
+    try {
+      setOpen(true);
+      const result = await apiAddNewAds(newAddData.current);
+      console.log(result);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      navigate("/search");
+      setOpen(true);
+    }
   };
   return (
     <div className="flex flex-col-reverse justify-center h-screen overflow-scroll md:overflow-hidden gap-8 md:flex-row md:justify-center md:items-center md:p-8">
@@ -140,6 +149,15 @@ function NewPost() {
         <p className="absolute font-bold text-white text-3xl">
           آگهی های خود را به سادگی به فروش بگذارید
         </p>
+      </div>
+
+      <div>
+        <Backdrop
+          sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+          open={open}
+        >
+          <CircularProgress color="inherit" />
+        </Backdrop>
       </div>
     </div>
   );
