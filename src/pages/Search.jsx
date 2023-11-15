@@ -11,7 +11,7 @@ import "@/components/UI/style.css";
 const Search = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [searchData, setSearchData] = useState([]);
-  console.log(searchData);
+
   const [searchParams] = useSearchParams();
 
   const [click, SetClick] = useState(false);
@@ -85,7 +85,6 @@ const Search = () => {
                 <FilterListIcon />
               </div>
             </div>
-
             <div className="grid grid-cols-2 sm:gap-16 md:grid-cols-2 md:gap-4 lg:grid-cols-3 lg:gap-1 xl:grid-cols-3 xl:gap-2">
               {isLoading ? (
                 <>
@@ -108,8 +107,8 @@ const Search = () => {
               )}
             </div>
             <div className="flex justify-center py-10">
-              <Stack spacing={2}>
-                <Pagination count={10} variant="outlined" shape="rounded" />
+              <Stack spacing={2} sx={{ direction: "ltr" }}>
+                <Pagination count={4} color="secondary" />
               </Stack>
             </div>
           </div>
