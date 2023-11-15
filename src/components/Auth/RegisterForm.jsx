@@ -1,5 +1,5 @@
 import axios from "axios";
-import FormLogin from "@/components/UI/FormLogin";
+import FormLogin from "@/components/UI/Input";
 import Button from "../UI/Button";
 import { useState } from "react";
 import { Link } from "react-router-dom";

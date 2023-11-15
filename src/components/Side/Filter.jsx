@@ -61,6 +61,8 @@ function Filter() {
             disableUnderline: true,
           }}
         />
+        <Input value={value[1]} onChange={(e) => handleInputChange(1, e)} />
+        <Input value={value[0]} onChange={(e) => handleInputChange(0, e)} />
       </Stack>
     </Box>
   );

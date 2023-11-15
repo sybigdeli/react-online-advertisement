@@ -6,7 +6,7 @@ import { useSearchParams } from "react-router-dom";
 
 function Search({ children }) {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [query, setQuery] = useState(() => searchParams.get("q"));
+  const [query, setQuery] = useState(() => searchParams.get("q") || '');
 
   const handleSearch = (event) => {
     event.preventDefault();

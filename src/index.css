@@ -23,7 +23,9 @@
   font-weight: bold;
   src: url("./assets/Fonts/Estedad-SemiBold.woff2");
 }
-
+*{
+  user-select: none;
+}
 body {
   direction: rtl !important;
   padding: 0;
