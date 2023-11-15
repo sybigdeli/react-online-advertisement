@@ -14,7 +14,8 @@ const ProductBox = ({ children, image_list, price, title, location }) => {
 
   return (
     <div
-      className="product-box  rounded-2xl  m-3 shadow-lg
+      className="product-box  rounded-2xl
+        m-3 shadow-lg
     "
     >
       <Swiper

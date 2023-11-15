@@ -23,7 +23,7 @@ function Filter() {
     <Box sx={{}}>
       <Stack>
         <Slider
-          value={value}
+          value={value[1]}
           onChange={handleChange}
           min={0}
           max={69000000}
@@ -35,7 +35,7 @@ function Filter() {
       </Stack>
       <Stack direction="row">
         <Input
-          value={value[1]}
+          value={value[0] || ""}
           onChange={(e) => handleInputChange(1, e)}
           InputProps={{
             inputProps: {
@@ -50,7 +50,7 @@ function Filter() {
         <Input
           sx={{ outline: "none" }}
           justifyContent="center"
-          value={value[0]}
+          value={value[0] || ""}
           onChange={(e) => handleInputChange(0, e)}
           InputProps={{
             inputProps: {
